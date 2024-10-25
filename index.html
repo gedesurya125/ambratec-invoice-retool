@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Ambratec invoice</title>
+  </head>
+  <body>
+    <!-- Copy the body content to the retool -->
+    <header class="clearfix">
+      <div id="logo">
+        <img src="[[logo]]" alt="helo" />
+      </div>
+      <div>
+        <div>
+          <h1>MONATSABRECHNUNG</h1>
+        </div>
+        <div>
+          <p></p>
+        </div>
+      </div>
+
+      <h1>INVOICE</h1>
+      <div id="company" class="clearfix">
+        <div>[[ship_to_company}}</div>
+        <div>
+          [[ship_to_street}}<br />[[ship_to_city}}, [[ship_to_state}}
+          [[ship_to_zip}}
+        </div>
+      </div>
+      <div id="project">
+        <div><span>Invoice #</span>[[invoice_id}}</div>
+        <div><span>Date</span>[[invoice_date}}</div>
+      </div>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr style="page-break-inside: avoid">
+            <th class="service">SKU</th>
+            <th>Price</th>
+            <th class="desc">Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          [[#line_items]]
+          <tr>
+            <td class="service">[[sku]]</td>
+            <td class="unit">[[currency price]]</td>
+            <td class="qty">[[quantity]]</td>
+            <td class="total">[[currency total]]</td>
+          </tr>
+          [[/line_items]]
+          <tr>
+            <td class="service">Totals</td>
+            <td class="unit"></td>
+            <td class="qty">[[sumQuantity line_items]]</td>
+            <td class="total">[[sumTotal line_items]]</td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="notices">
+        <div>NOTICE:</div>
+        <div class="notice">
+          A finance charge of 1.5% will be made on unpaid balances after 30
+          days.
+        </div>
+      </div>
+    </main>
+    <footer>
+      Invoice was created on a computer and is valid without the signature and
+      seal.
+    </footer>
+  </body>
+</html>
