@@ -1,142 +1,167 @@
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-a {
-  color: #5d6975;
-  text-decoration: underline;
+/* Component specific styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  position: relative;
-  width: 21cm;
-  height: 29.7cm;
-  margin: 0 auto;
-  color: #001028;
-  background: #ffffff;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-family: Arial;
+  width: 100%;
 }
 
 header {
-  padding: 10px 0;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
-#logo {
-  text-align: center;
-  margin-bottom: 10px;
+#container * {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#logo img {
-  width: 90px;
-}
-
-h1 {
-  border-top: 1px solid #5d6975;
-  border-bottom: 1px solid #5d6975;
-  color: #5d6975;
-  font-size: 2.4em;
-  line-height: 1.4em;
-  font-weight: normal;
-  text-align: center;
-  margin: 0 0 20px 0;
-}
-
-#project {
-  float: left;
-}
-
-#project span {
-  color: #5d6975;
-  text-align: right;
-  width: 52px;
-  margin-right: 10px;
-  display: inline-block;
-  font-size: 0.8em;
-}
-
-#company {
-  float: right;
-  text-align: right;
-}
-
-#project div,
-#company div {
-  white-space: nowrap;
-}
-
-table {
-  width: 100%;
+.sales-info-table {
+  margin-top: 20px;
   border-collapse: collapse;
-  border-spacing: 0;
-  margin-bottom: 20px;
 }
 
-table tr {
-  break-inside: avoid;
+.sales-info-table tr {
+  border-bottom: 1px dashed black;
 }
-table tr:nth-child(2n-1) td {
-  background: #f5f5f5;
-}
-
-table th,
-table td {
-  text-align: center;
+.sales-info-table tr td {
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-table th {
-  padding: 5px 20px;
-  color: #5d6975;
-  border-bottom: 1px solid #c1ced9;
-  white-space: nowrap;
-  font-weight: normal;
-}
-
-table .service,
-table .desc {
-  text-align: left;
-}
-
-table td {
-  padding: 20px;
+.sales-info-table tr td:first-of-type {
   text-align: right;
 }
-
-table td.service,
-table td.desc {
-  vertical-align: top;
+.sales-info-table tr td:not(:first-of-type) {
+  padding-left: 10px;
+  min-width: 200px;
 }
 
-table td.unit,
-table td.qty,
-table td.total {
-  font-size: 1.2em;
+.salary-table-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 100px;
 }
 
-table td.grand {
-  border-top: 1px solid #5d6975;
+.__table-title-container {
+  background-color: rgb(215, 215, 215);
+  border-top: 1px solid black;
 }
-
-#notices .notice {
-  color: #5d6975;
-  font-size: 1.2em;
-}
-
-footer {
-  color: #5d6975;
-  width: 100%;
-  height: 30px;
-  position: absolute;
-  bottom: 0;
-  border-top: 1px solid #c1ced9;
-  padding: 8px 0;
+.__table-title-container h2 {
   text-align: center;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.__first-table table {
+  width: 100%;
+}
+
+thead tr td {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Reusable styles */
+
+.border-primary {
+  border: 1px solid black;
+}
+.p-md {
+  padding: 20px;
+}
+.p-lg {
+  padding: 60px;
+}
+.px-30 {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.py-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.font-md {
+  font-size: 18px;
+}
+.font-lg {
+  font-size: 22px;
+}
+
+.spacing-lg {
+  letter-spacing: 5px;
+}
+
+.w-200 {
+  width: 200px;
+}
+
+.self-right {
+  justify-self: right;
+}
+.ml-auto {
+  margin-left: auto;
+}
+
+.content-between {
+  justify-content: space-between;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }
 .logo {
   width: 100px;
-  height: 100px;
+}
+
+.color-primary {
+  color: black;
+}
+.color-background {
+  color: white;
+}
+
+.weight-semi-bold {
+  font-weight: 500;
+}
+
+.bg-color-primary {
+  background-color: white;
+}
+.bg-color-black {
+  background-color: black;
 }
