@@ -26,6 +26,7 @@ header {
 .sales-info-table tr {
   border-bottom: 1px dashed black;
 }
+
 .sales-info-table tr td {
   font-size: 18px;
   padding-top: 5px;
@@ -35,35 +36,95 @@ header {
 .sales-info-table tr td:first-of-type {
   text-align: right;
 }
+
 .sales-info-table tr td:not(:first-of-type) {
   padding-left: 10px;
   min-width: 200px;
 }
 
-.salary-table-container {
+.performance-billing-container {
+  width: 100%;
+  gap: 5%;
+  display: flex;
   margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px 100px;
 }
 
-.__table-title-container {
+.__table-title {
   background-color: rgb(215, 215, 215);
-  border-top: 1px solid black;
+  border: 1px solid black;
 }
-.__table-title-container h2 {
+
+.__table-title h2 {
   text-align: center;
   font-size: 18px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-.__first-table table {
+
+.performance-billing-container table {
+  margin-top: 50px;
   width: 100%;
+  border-collapse: collapse;
+}
+
+.performance-billing-container tbody td,
+th {
+  padding: 5px 10px;
+}
+
+.performance-billing-container tfoot {
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
+}
+
+.performance-billing-container tfoot th {
+  padding: 5px 10px;
+  font-weight: normal;
+}
+
+.performance-billing-container tfoot td {
+  padding: 5px 10px;
+  font-weight: bold;
+  text-align: right;
+}
+
+table thead td.amount-emphasize {
+  font-weight: bold;
+  text-align: center;
+}
+
+table tbody td.amount-emphasize {
+  font-weight: bold;
+  text-align: right;
+}
+
+table tbody td.amount {
+  text-align: right;
+}
+
+table tbody td.number {
+  text-align: center;
+}
+
+.__table-overview-performance td,
+th {
+  text-align: right;
+}
+
+.__table-tax-benefit {
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 thead tr td {
   font-size: 16px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+footer {
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -72,20 +133,25 @@ thead tr td {
 .border-primary {
   border: 1px solid black;
 }
+
 .p-md {
   padding: 20px;
 }
+
 .p-lg {
   padding: 60px;
 }
+
 .px-30 {
   padding-right: 30px;
   padding-left: 30px;
 }
+
 .py-5 {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 .py-10 {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -94,6 +160,7 @@ thead tr td {
 .font-md {
   font-size: 18px;
 }
+
 .font-lg {
   font-size: 22px;
 }
@@ -106,9 +173,22 @@ thead tr td {
   width: 200px;
 }
 
+.w-sm {
+  width: 50%;
+}
+
+.w-md {
+  width: 75%;
+}
+
+.w-full {
+  width: 100%;
+}
+
 .self-right {
   justify-self: right;
 }
+
 .ml-auto {
   margin-left: auto;
 }
@@ -144,6 +224,7 @@ thead tr td {
 .mt-20 {
   margin-top: 20px;
 }
+
 .logo {
   width: 100px;
 }
@@ -151,6 +232,7 @@ thead tr td {
 .color-primary {
   color: black;
 }
+
 .color-background {
   color: white;
 }
@@ -162,6 +244,17 @@ thead tr td {
 .bg-color-primary {
   background-color: white;
 }
+
 .bg-color-black {
   background-color: black;
+}
+
+.filled-chevron-right {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid black;
+  /* Color for the fill */
+  display: inline-block;
 }
