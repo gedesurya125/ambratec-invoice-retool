@@ -74,7 +74,7 @@ th {
 }
 
 .performance-billing-container tbody td,
-th {
+.performance-billing-container tbody th {
   padding: 5px 10px;
 }
 
@@ -92,6 +92,20 @@ th {
   padding: 5px 10px;
   font-weight: bold;
   text-align: right;
+}
+
+.performance-billing-container .total-section {
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
+}
+
+.performance-billing-container .total-section th,
+.performance-billing-container .total-section td {
+  font-weight: bold;
+}
+
+.miscellaneous-value {
+  color: red
 }
 
 table thead td.amount-emphasize {
@@ -113,8 +127,14 @@ table tbody td.number {
 }
 
 .__table-overview-performance td,
-th {
+.__table-overview-performance th {
   text-align: right;
+}
+
+.__table-overview-performance .separate-section tr {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted black;
 }
 
 thead tr td {
