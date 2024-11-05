@@ -27,10 +27,16 @@ header {
   border-bottom: 1px dashed black;
 }
 
-.sales-info-table tr td {
-  font-size: 18px;
+.sales-info-table tr td,
+th {
+  font-weight: normal;
+  font-size: 12px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.sales-info-table tr td {
+  font-weight: bold;
 }
 
 .sales-info-table tr td:first-of-type {
@@ -56,7 +62,7 @@ header {
 
 .__table-title h2 {
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -79,7 +85,7 @@ th {
 
 .performance-billing-container tfoot th {
   padding: 5px 10px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .performance-billing-container tfoot td {
@@ -111,18 +117,24 @@ th {
   text-align: right;
 }
 
-.__table-tax-benefit {
-  max-width: 75%;
-  margin: 0 auto;
-}
-
 thead tr td {
-  font-size: 16px;
+  font-size: 12px;
   text-align: center;
   padding: 5px 10px;
 }
 
+tbody tr th,
+td {
+  font-size: 12px;
+}
+
+tfoot tr th,
+td {
+  font-size: 12px;
+}
+
 footer {
+  font-size: 10px;
   margin-top: 50px;
   text-align: center;
 }
