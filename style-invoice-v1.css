@@ -28,19 +28,19 @@ header {
 }
 
 .sales-info-table tr td,
-th {
+.sales-info-table tr th {
   font-weight: normal;
   font-size: 12px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
+}
+
+.sales-info-table tr th {
+  text-align: right;
 }
 
 .sales-info-table tr td {
+  text-align: left;
   font-weight: bold;
-}
-
-.sales-info-table tr td:first-of-type {
-  text-align: right;
 }
 
 .sales-info-table tr td:not(:first-of-type) {
@@ -65,6 +65,10 @@ th {
   font-size: 14px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.__company-logo {
+  width: 120px;
 }
 
 .performance-billing-container table {
@@ -102,23 +106,24 @@ th {
 .performance-billing-container .total-section th,
 .performance-billing-container .total-section td {
   font-weight: bold;
+  text-align: right;
 }
 
 .miscellaneous-value {
   color: red
 }
 
-table thead td.amount-emphasize {
+table thead td.is-number-emphasize {
   font-weight: bold;
   text-align: center;
 }
 
-table tbody td.amount-emphasize {
+table tbody td.is-number-emphasize {
   font-weight: bold;
   text-align: right;
 }
 
-table tbody td.amount {
+table tbody td.is-number {
   text-align: right;
 }
 
@@ -128,6 +133,7 @@ table tbody td.number {
 
 .__table-overview-performance td,
 .__table-overview-performance th {
+  font-weight: normal;
   text-align: right;
 }
 
@@ -138,7 +144,7 @@ table tbody td.number {
 }
 
 thead tr td {
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
   padding: 5px 10px;
 }
@@ -189,11 +195,11 @@ footer {
 }
 
 .font-md {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .font-lg {
-  font-size: 22px;
+  font-size: 12px;
 }
 
 .spacing-lg {
