@@ -1,0 +1,238 @@
+<!-- <div class="flex content-between gap-12">
+                <div class="billingDetails">
+                    <p>
+                        [[billingNumber.de]]:
+                    </p>
+                    <p>
+                        [[billingDetails.billingNumber]]
+                    </p>
+                    <p>
+                        [[billingDetails.date]]
+                    </p>
+
+                </div>
+
+                <div class="billingDetails">
+                    <p>
+                        [[taxNumber.de]]:
+                    </p>
+                    <p>
+                        [[billingDetails.taxNumber]]
+                    </p>
+                    <p>
+                        [[employeeDetails.code]]
+                    </p>
+                </div>
+            </div>
+
+            <div class="performance-overview">
+                <div class="__table-title">
+                    <h2>I. [[performanceOverview.de]]</h2>
+                </div>
+                <table class="__table-overview-performance w-full mt-6">
+                    [[#if performanceOverviewDetails.data]]
+                    <tbody>
+                        [[#each performanceOverviewDetails.data]]
+                        <tr>
+                            <td>[[this.label]]</td>
+                            <td class="is-number [[#if (function 'isNegative' this.amount)]]miscellaneous-value[[/if]]">
+                                [[function 'formatCurrency'
+                                this.amount]]
+                            </td>
+                        </tr>
+                        [[/each]]
+                    </tbody>
+                    [[/if]]
+                </table>
+            </div>
+
+            <div class="commission-billing section">
+                <div class="__table-title">
+                    <h2>II. [[serviceBilling.de]]</h2>
+                </div>
+                <table class="__table-overview-performance w-full mt-6">
+                    [[#if commissionBillingDetails]]
+                    <tbody>
+                        [[#each commissionBillingDetails]]
+                        <tr>
+                            <td>[[this.label]]</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="is-number [[#if (function 'isNegative' this.amount)]]miscellaneous-value[[/if]]">
+                                [[function 'formatCurrency'
+                                this.amount]]
+                            </td>
+                        </tr>
+                        [[/each]]
+                    </tbody>
+                    [[/if]]
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">[[commissionTotal.de]]</td>
+                            <td class="is-number">
+                                [[function 'totalCommission'
+                                commissionBillingDetails.data]]
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="deduction-or-credit section">
+                <div class="__table-title">
+                    <h2>III. [[deductionOrCredit.de]]</h2>
+                </div>
+                <table class="__table-deduction-or-credit w-full mt-6">
+                    [[#if deductionOrCreditDetails.data]]
+                    <tbody>
+                        [[#each deductionOrCreditDetails.data]]
+                        <tr>
+                            <td>[[this.label]]</td>
+                            <td class="is-number [[#if (function 'isNegative' this.amount)]]miscellaneous-value[[/if]]">
+                                [[function 'formatCurrency' this.amount]]
+                            </td>
+                            <td></td>
+                        </tr>
+                        [[/each]]
+                    </tbody>
+                    [[/if]]
+                    <tfoot>
+                        <tr>
+                            <td>[[subtotal.de]]</td>
+                            <td class="is-number">
+                                [[function 'totalDeduction'
+                                deductionOrCreditDetails.data]]
+                            </td>
+                            <td class="is-number">
+                                [[function 'subTotalFromDeduction'
+                                deductionDetails=deductionOrCreditDetails.total
+                                commissionDetails=commissionBillingDetails.data]]
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="payout section">
+                <div class="__table-title">
+                    <h2>IV. [[payout.de]]</h2>
+                </div>
+                <table class="__table-payout w-full mt-6">
+                    [[#if payoutDetails.data]]
+                    <tbody>
+                        <tr>
+                            <td>[[commissionTotal.de]]</td>
+                            <td class="is-number">
+                                [[function 'totalCommission'
+                                commissionBillingDetails.data]]
+                            </td>
+                        </tr>
+                        [[#each payoutDetails.data]]
+                        <tr>
+                            <td>[[this.label]]</td>
+                            <td class="is-number [[#if (function 'isNegative' this.amount)]]miscellaneous-value[[/if]]">
+                                [[function 'formatCurrency'
+                                this.amount]]
+                            </td>
+                        </tr>
+                        [[/each]]
+                    </tbody>
+                    [[/if]]
+                    <tfoot>
+                        <tr>
+                            <td>[[payoutAmount.de]]</td>
+                            <td
+                                class="is-number [[#if (function 'isNegative' payoutDetails.total)]]miscellaneous-value[[/if]]">
+                                [[ function 'totalPayout' payoutDetails=payoutDetails.data
+                                commissionDetails=commissionBillingDetails.data]]
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="promotional-items-credit section">
+                <div class="__table-title">
+                    <h2>IV. [[promotionalItemsCredit.de]]</h2>
+                </div>
+                <table class="__table-promotional-items-credit w-full mt-6">
+                    [[#if promotionalItemsCreditDetails.data]]
+                    <tbody>
+                        [[#each promotionalItemsCreditDetails.data]]
+                        <tr>
+                            <td>[[this.label]]</td>
+                            <td class="is-number">
+                                [[this.percent]]
+                            </td>
+                            <td class="is-number [[#if (function 'isNegative' this.amount)]]miscellaneous-value[[/if]]">
+                                [[function 'formatCurrency'
+                                this.amount]]
+                            </td>
+                            <td></td>
+                        </tr>
+                        [[/each]]
+                    </tbody>
+                    [[/if]]
+                    [[#if promotionalItemsCreditDetails.total]]
+                    <tfoot>
+                        <tr>
+                            <td>[[total.de]]</td>
+                            <td></td>
+                            <td
+                                class="is-number [[#if (function 'isNegative' promotionalItemsCreditDetails.total)]]miscellaneous-value[[/if]]">
+                                [[function 'formatCurrency'
+                                promotionalItemsCreditDetails.total]]
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                    [[/if]]
+                </table>
+            </div>
+
+            <div class="signed-section">
+                <div class="will-sign">
+                    <div>
+                        <p>[[ambratec.de]]</p>
+                        <p>[[issuedDate]]</p>
+                    </div>
+                    <p>[[employeeDetails.ambratecReps]]</p>
+                </div>
+                <div class="will-sign">
+                    <p>[[supervisor.de]]: [[employeeDetails.inChargeOf]]</p>
+                    <p>[[employeeDetails.inChargeBy]]</p>
+                </div>
+            </div>
+
+            <div class="statement">
+                <p>[[originalInvoiceIssuedOf.de]] [[employeeDetails.contractDate]] [[withInterimChanges.de]]</p>
+            </div>
+
+            <div class="summary-account">
+                <div class="__head">
+                    <p>
+                        [[accountPromotionalGifts.de]]
+                    </p>
+                    <p>
+                        [[asOf.de]]
+                    </p>
+                    <p>
+                        [[billingDetails.date]]
+                    </p>
+                </div>
+                <div class="__body">
+                    [[#each summaryAccountPromotionalDetails]]
+                    <div class="group">
+                        <p class="title">
+                            [[this.label]]
+                        </p>
+                        <p class="is-number [[#if (function 'isNegative' this.amount)]]miscellaneous-value[[/if]]">
+                            [[function 'formatCurrency'
+                            this.amount]]
+                        </p>
+                    </div>
+                    [[/each]]
+
+                </div>
+            </div> -->

@@ -1,0 +1,361 @@
+/* Component specific styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 910px;
+  line-height: 125%;
+}
+
+header {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 40%;
+  gap: 5%
+}
+
+.__company-logo {
+  width: 300px;
+  justify-self: end;
+}
+
+#container * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.monthly-statement-details {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%
+}
+
+.monthly-statement-details p {
+  font-size: 12pt;
+  line-height: 125%;
+  font-weight: bold;
+}
+
+.monthly-statement-details .title {
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+main {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 12pt;
+}
+
+.billingDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.billingDetails p {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.signed-section {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 3rem;
+  font-size: 11pt
+}
+
+.will-sign {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 10rem
+}
+
+.statement {
+  width: 90%;
+  margin-top: 1rem;
+  font-size: 11pt;
+  color: red
+}
+
+.summary-account {
+  margin-top: 5rem;
+}
+
+.summary-account .__head {
+  display: flex;
+  gap: 3rem;
+  border: 2px solid black;
+  font-weight: bold;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.summary-account .__body {
+  display: flex;
+  justify-content: center;
+  gap: 2rem
+}
+
+.summary-account .__body .group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 25%;
+}
+
+.summary-account .__body .title {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+
+.performance-billing-container {
+  width: 100%;
+  gap: 5%;
+  display: flex;
+  margin-top: 30px;
+}
+
+.__table-title {
+  background-color: rgb(215, 215, 215);
+  border: 1px solid black;
+}
+
+.__table-title h2 {
+  text-align: left;
+  font-size: 11pt;
+  padding: 10px;
+}
+
+.performance-billing-container table {
+  margin-top: 50px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.performance-billing-container tbody td,
+.performance-billing-container tbody th {
+  padding: 5px 10px;
+}
+
+
+.performance-billing-container .total-section {
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
+}
+
+.performance-billing-container .total-section th,
+.performance-billing-container .total-section td {
+  font-weight: bold;
+  text-align: right;
+}
+
+.miscellaneous-value {
+  color: red
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+table thead td.is-number-emphasize {
+  font-weight: bold;
+  text-align: center;
+}
+
+table tbody td.is-number-emphasize {
+  font-weight: bold;
+  text-align: right;
+}
+
+table tbody td.is-number,
+table tfoot td.is-number {
+  text-align: right;
+}
+
+table tbody td.number,
+table tfoot td.number {
+  text-align: center;
+}
+
+tfoot {
+  border-bottom: 2px solid black;
+}
+
+tfoot tr th,
+tfoot tr td {
+  font-size: 12pt;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+thead tr td {
+  font-size: 11pt;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+tbody tr th,
+tbody tr td {
+  font-size: 11pt;
+}
+
+
+footer {
+  font-size: 10pt;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Reusable styles */
+
+.border-primary {
+  border: 1px solid black;
+}
+
+.p-md {
+  padding: 20px;
+}
+
+.p-lg {
+  padding: 60px;
+}
+
+.px-30 {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.py-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.font-md {
+  font-size: 14px;
+}
+
+.font-lg {
+  font-size: 16px;
+}
+
+.spacing-lg {
+  letter-spacing: 5px;
+}
+
+.w-200 {
+  width: 200px;
+}
+
+.w-sm {
+  width: 50%;
+}
+
+.w-md {
+  width: 75%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.self-right {
+  justify-self: right;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.content-between {
+  justify-content: space-between;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.logo {
+  width: 100px;
+}
+
+.color-primary {
+  color: black;
+}
+
+.color-background {
+  color: white;
+}
+
+.weight-semi-bold {
+  font-weight: 500;
+}
+
+.bg-color-primary {
+  background-color: white;
+}
+
+.bg-color-black {
+  background-color: black;
+}
+
+.filled-chevron-right {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid black;
+  /* Color for the fill */
+  display: inline-block;
+}

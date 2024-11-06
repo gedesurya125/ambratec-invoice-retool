@@ -1,0 +1,177 @@
+{
+  "content": {
+    "monthlyStatement": "MONATSABRECHNUNG",
+    "postingDocumentForCommissionSettlement": "Buchungsbeleg für Provisionsabrechnung",
+    "ambratecAddress1": "Ambratec GmbH, Carl-Zeiss-Str. 43, 55129 Mainz",
+    "ambratecAddress2": "Handelregister: Amtsgericht Mainz HRB 1310 Geschäftsführer Christian Thielemann",
+    "ambratecAddress3": "Steuer-Nr. 266 5000 366 USt-IdNr.: DE 149 045 059",
+    "employee": "Mitarbeiter",
+    "month": "Monat",
+    "billingNumber": "Abrechnungsnummer"
+  },
+
+  "data": {
+    "name": "Firma Becker GmbH",
+    "address": "Friedhofstr. 2",
+    "address2": "25436 Uetersen",
+    "issuedMonth": "September 2024",
+    "billingNumber": "1099",
+    "billingNumberMonth": "09-2024"
+  },
+
+  "constant": {
+    "monthlyStatement": {
+      "de": "MONATSABRECHNUNG"
+    },
+    "employees": {
+      "de": "Mitarbeiter"
+    },
+    "month": {
+      "de": "Monat"
+    },
+    "billingNumber": {
+      "de": "Abrechnungsnummer"
+    },
+    "taxNumber": {
+      "de": "Steuernummer"
+    },
+    "performanceOverview": {
+      "de": "LEISTUNGSÜBERSICHT"
+    },
+    "serviceBilling": {
+      "de": "LEISTUNGSABRECHNUNG"
+    },
+    "total": {
+      "de": "Gesamt"
+    },
+    "commissionTotal": {
+      "de": "Gesamtprovision (brutto)"
+    },
+    "deductionOrCredit": {
+      "de": "ABZÜGE / GUTSCHRIFTEN"
+    },
+    "subtotal": {
+      "de": "Zwischensumme"
+    },
+    "payout": {
+      "de": "AUSZAHLUNG"
+    },
+    "payoutAmount": {
+      "de": "Auszahlungsbetrag"
+    },
+    "promotionalItemsCredit": {
+      "de": "AKTIONS- und STREUARTIKEL-GUTSCHRIFT"
+    },
+    "ambratec": {
+      "de": "Ambratec GmbH"
+    },
+    "supervisor": {
+      "de": "Sachbearbeiter"
+    },
+    "originalInvoiceIssuedOf": {
+      "de": "Die Originalabrechnung wurde aufgrund des Handelsvertretervertrages vom"
+    },
+    "withInterimChanges": {
+      "de": "mit zwischenzeitlichen Änderungen erstellt."
+    },
+    "accountPromotionalGifts": {
+      "de": "Kontostand - Werbegeschenke"
+    },
+    "asOf": {
+      "de": "Stand per"
+    },
+    "transferToPreviousMonth": {
+      "de": "Übertrag Vormonat"
+    },
+    "credit": {
+      "de": "Gutschrift"
+    },
+    "deliveredOrReturned": {
+      "de": "geliefert bzw.  Rücknahme"
+    },
+    "accountBalance": {
+      "de": "Kontostand"
+    }
+  },
+  "contents": {
+    "monthlyStatement": "MONATSABRECHNUNG",
+    "postingDocumentForCommissionSettlement": "Buchungsbeleg für Provisionsabrechnung",
+    "employee": "Mitarbeiter",
+
+    "employeeDetails": {
+      "name": "Firma Becker GmbH",
+      "address": "Friedhofstr. 2",
+      "address2": "25436 Uetersen",
+      "code": "BECKERJ_HV",
+      "contractDate": "15-12-2009",
+      "ambratecReps": "Christian Thielemann",
+      "inChargeOf": "Stefanie Wagner",
+      "inChargeBy": "Sonja Höhne"
+    },
+    "issuedDate": "30 September 2024",
+    "billingDetails": {
+      "date": "30-09-2024",
+      "billingNumber": "1099",
+      "taxNumber": "18/297/00316"
+    },
+    "performanceOverviewDetails": {
+      "data": [
+        { "label": "Fakturierter Monats - Gesamtumsatz", "amount": 9398.15 },
+        { "label": "Umsatz Sonstige", "amount": 0 },
+        { "label": "sonstige Produktrückstände", "amount": 0 },
+        { "label": "Provisionsumsatz", "amount": 9398.15 },
+        { "label": "Umsatz Sprüher", "amount": 79.1 }
+      ]
+    },
+    "commissionBillingDetails": {
+      "data": [{ "label": "Umsatz", "amount": 9398.15 }]
+    },
+    "deductionOrCreditDetails": {
+      "data": [
+        { "label": "Sonstiges", "amount": 0 },
+        { "label": "Sonstiges", "amount": 0 },
+        { "label": "Sonstiges", "amount": 0 },
+        { "label": "Sonstiges", "amount": 0 },
+        { "label": "Sonstiges", "amount": 0 }
+      ]
+    },
+    "payoutDetails": {
+      "data": [{ "label": "abzügl. Werbegeschenk-Schuld", "amount": 0 }]
+    },
+    "promotionalItemsCreditDetails": {
+      "data": [
+        {
+          "label": "Werbegeschenkgutschrift - Streuartikel in % vom Umsatz",
+          "percent": "1%",
+          "amount": "93.98"
+        },
+        {
+          "label": "Werbegeschenkgutschrift - Aktionen in % vom Umsatz",
+          "percent": "0.75%",
+          "amount": "70.49"
+        },
+        {
+          "label": "WG-Bonus: Umsatz in €",
+          "percent": "0%",
+          "amount": "0"
+        },
+        {
+          "label": "WG-Bonus: in %",
+          "percent": "0%",
+          "amount": "0"
+        },
+        {
+          "label": "zzgl. MwSt",
+          "percent": "19%",
+          "amount": "31.25"
+        }
+      ]
+    },
+    "summaryAccountPromotionalDetails": [
+      { "label": "Übertrag Vormonat", "amount": 454.93 },
+      { "label": "Gutschrift", "amount": 195.72 },
+      { "label": "geliefert bzw.  Rücknahme", "amount": 0 },
+      { "label": "Kontostand", "amount": 650.65 }
+    ]
+  }
+}
