@@ -58,9 +58,9 @@
               [[#each content.performanceOverviewDetails.data]]
               <tr>
                 <th>[[label]]:</th>
-                <td class="[[#if (function 'isNegative' salesVolume)]]miscellaneous-value[[/if]]">[[function
+                <td class="[[#if (function 'isNegative' amount)]]miscellaneous-value[[/if]]">[[function
                   'formatCurrency'
-                  salesVolume]]
+                  amount]]
                 </td>
                 <td class="is-number-emphasize [[#if (function 'isNegative' sigma)]]danger[[/if]]">[[#if sigma]]
                   [[function 'formatCurrency'
@@ -106,10 +106,9 @@
                   <div class="filled-chevron-right"></div>
                 </td>
                 <td class="is-number">[[this.percent]]</td>
-                <td
-                  class="is-number-emphasize [[#if (function 'isNegative' this.commission)]]miscellaneous-value[[/if]]">
+                <td class="is-number-emphasize [[#if (function 'isNegative' this.amount)]]miscellaneous-value[[/if]]">
                   [[#if
-                  this.commission]] [[function 'formatCurrency' this.commission]][[/if]]</td>
+                  this.commission]] [[function 'formatCurrency' this.amount]][[/if]]</td>
               </tr>
               [[/each]]
             </tbody>
