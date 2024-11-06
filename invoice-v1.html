@@ -107,8 +107,7 @@
                 </td>
                 <td class="is-number">[[this.percent]]</td>
                 <td class="is-number-emphasize [[#if (function 'isNegative' this.amount)]]miscellaneous-value[[/if]]">
-                  [[#if
-                  this.commission]] [[function 'formatCurrency' this.amount]][[/if]]</td>
+                  [[function 'formatCurrency' this.amount]]</td>
               </tr>
               [[/each]]
             </tbody>
