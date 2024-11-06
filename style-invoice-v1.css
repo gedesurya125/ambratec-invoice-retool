@@ -27,14 +27,20 @@ header {
   border-bottom: 1px dashed black;
 }
 
-.sales-info-table tr td {
+.sales-info-table tr td,
+.sales-info-table tr th {
+  font-weight: normal;
   font-size: 12px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
 }
 
-.sales-info-table tr td:first-of-type {
+.sales-info-table tr th {
   text-align: right;
+}
+
+.sales-info-table tr td {
+  text-align: left;
+  font-weight: bold;
 }
 
 .sales-info-table tr td:not(:first-of-type) {
@@ -56,7 +62,7 @@ header {
 
 .__table-title h2 {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -72,7 +78,7 @@ header {
 }
 
 .performance-billing-container tbody td,
-th {
+.performance-billing-container tbody th {
   padding: 5px 10px;
 }
 
@@ -83,7 +89,7 @@ th {
 
 .performance-billing-container tfoot th {
   padding: 5px 10px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .performance-billing-container tfoot td {
@@ -92,17 +98,32 @@ th {
   text-align: right;
 }
 
-table thead td.amount-emphasize {
-  font-weight: bold;
-  text-align: center;
+.performance-billing-container .total-section {
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
 }
 
-table tbody td.amount-emphasize {
+.performance-billing-container .total-section th,
+.performance-billing-container .total-section td {
   font-weight: bold;
   text-align: right;
 }
 
-table tbody td.amount {
+.miscellaneous-value {
+  color: red
+}
+
+table thead td.is-number-emphasize {
+  font-weight: bold;
+  text-align: center;
+}
+
+table tbody td.is-number-emphasize {
+  font-weight: bold;
+  text-align: right;
+}
+
+table tbody td.is-number {
   text-align: right;
 }
 
@@ -111,22 +132,35 @@ table tbody td.number {
 }
 
 .__table-overview-performance td,
-th {
+.__table-overview-performance th {
+  font-weight: normal;
   text-align: right;
 }
 
-.__table-tax-benefit {
-  max-width: 75%;
-  margin: 0 auto;
+.__table-overview-performance .separate-section tr {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted black;
 }
 
 thead tr td {
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
   padding: 5px 10px;
 }
 
+tbody tr th,
+td {
+  font-size: 12px;
+}
+
+tfoot tr th,
+td {
+  font-size: 12px;
+}
+
 footer {
+  font-size: 10px;
   margin-top: 50px;
   text-align: center;
 }
