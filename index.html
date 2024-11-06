@@ -55,47 +55,4 @@
 
   renderTemplate();
 
-  Handlebars.registerHelper('function', function (functionName, value) {
-
-    function formatCurrency(value) {
-      if (value < 0) {
-        // Format negative number as "(€X,XXX.XX)"
-        return ` (€${Math.abs(value).toLocaleString('en-US', { minimumFractionDigits: 2 })})`;
-      }
-
-      return `€${parseFloat(value).toLocaleString('en-US', {
-        style: 'decimal',
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-      })}`
-    }
-
-    function getTotalAmount(value) {
-      const total = value.reduce((sum, item) => {
-        return sum + parseFloat(item.amount);
-      }, 0).toFixed(2);
-
-      return total
-    }
-
-    switch (functionName) {
-      case "isNegative":
-        return value < 0;
-        break;
-      case "formatCurrency":
-        return formatCurrency(value)
-        break;
-      case "totalPerformanceOverview":
-        const total = getTotalAmount(value)
-        return formatCurrency(total);
-        break;
-      case "totalServiceBilling":
-        const totalCommission = getTotalAmount(value)
-        return formatCurrency(totalCommission)
-        break;
-      default:
-        break
-    }
-  })
-
 </script>

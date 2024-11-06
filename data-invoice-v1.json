@@ -1,161 +1,91 @@
 {
-  "constant": {
-    "performanceOverview": {
-      "de": "LEISTUNGSÜBERSICHT"
-    },
-    "serviceBilling": {
-      "de": "LEISTUNGSABRECHNUNG"
-    },
-    "total": {
-      "de": "GESAMT"
-    },
-    "commissionTotal": {
-      "de": "Provision GESAMT"
-    }
-  },
   "content": {
-    "salesInformation": {
-      "name": "Assaker, Dany",
-      "vtId": "1272",
-      "verkCode": "ASSAKERD",
-      "personalnr": "01257"
-    },
-    "performanceOverviewDetails": {
-      "head": ["", "UMSATZ", "Σ"],
-      "data": [
-        { "label": "Umsatz Handelsware", "amount": 1889.28 },
-        { "label": "Umsatz Sonstige", "amount": 528.36 },
-        { "label": "Umsatz Ambrasol", "amount": 0 },
-        { "label": "Umsatz Sprüher", "amount": 0 },
-
-        { "label": "Trainer-Umsatz Handelsware", "amount": -6219.6 },
-        {
-          "label": "Trainer-Umsatz Sonstige",
-          "amount": 0.0,
-          "sigma": 8637.24
-        },
-        { "label": "Trainer Umsatz - Ambrasol", "amount": 0 },
-        { "label": "Trainer Umsatz - Sprüher", "amount": 0 },
-        { "label": "Trainer Umsatz -Hilfsprodukte", "amount": 0 },
-        { "label": "BTR/WGR Fluid + Taps", "amount": 0 },
-        { "label": "Umsatz Provisions - %", "amount": 0 },
-        { "label": "Anzahl der Service Termine", "amount": 0 },
-        { "label": "Anzahl der UVV Prüfungen", "amount": 0 }
-      ]
-    },
-
-    "serviceBillingDetails": {
-      "head": ["", "", "", "", "PROVISION"],
-      "data": [
-        {
-          "code": "170",
-          "label": "Prov. ambratec",
-          "percent": "10.0%",
-          "amount": 863.72
-        },
-        {
-          "code": "237",
-          "label": "Prov. Sprüher",
-          "percent": "10.0%",
-          "amount": 36.52
-        },
-        {
-          "code": "236",
-          "label": "Prov. Ambrosol",
-          "percent": "10.0%",
-          "amount": 4.44
-        },
-        {
-          "code": "236",
-          "label": "Prov. Matecra",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "Prov. Trainer Umsatz",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "Prov. Trainer Sprüher",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "Prov. Trainer Ambrasol",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "bis 10.000€",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "10.000€ - 15.000€",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "> 15.000€",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "10.000€ - 20.000€",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "> 20.000€",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "Garantieprovision",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "BTR-Fluid + WGR",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "Starterbonus Auffüllung",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "Starterbonus",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "Service Termine",
-          "percent": "0%",
-          "amount": 0
-        },
-        {
-          "code": "236",
-          "label": "UVV Prüfungen",
-          "percent": "0%",
-          "amount": 0
-        }
-      ]
-    }
+    "monthlyStatement": "MONATSABRECHNUNG",
+    "performanceOverview": "1. LEISTUNGSÜBERSICHT",
+    "serviceBilling": "2. LEISTUNGSABRECHNUNG",
+    "total": "GESAMT",
+    "commissionTotal": "Provision GESAMT",
+    "salesName": "Name",
+    "salesVtId": "VT- ID",
+    "salesVerkCode": "Verk. - Code",
+    "personalnr": "Personalnr.",
+    "umsatz": "UMSATZ",
+    "sigma": "Σ",
+    "merchandiseRevenue": "Umsatz Handelsware",
+    "otherRevenue": "Umsatz Sonstige",
+    "ambrasolRevenue": "Umsatz Ambrasol",
+    "sprayerRevenue": "Umsatz Sprüher",
+    "trainerMerchandiseRevenue": "Trainer-Umsatz Handelsware",
+    "trainerOtherRevenue": "Trainer-Umsatz Sonstige",
+    "trainerAmbrasolRevenue": "Trainer-Umsatz Ambrasol",
+    "trainerSprayerRevenue": "Trainer-Umsatz Sprüher",
+    "trainerAuxilaryProductRevenue": "Trainer-Umsatz Hilfsprodukte",
+    "btrWgrFluidTaps": "BTR/WGR Fluid + Taps",
+    "commissionRevenue": "Umsatz Provisions - %",
+    "serviceAppoinmentsNumber": "Anzahl der Service Termine",
+    "inspectionOfUvvNumber": "Anzahl der UVV Prüfungen",
+    "commission": "PROVISION",
+    "ambratecCommission": "Prov. Ambratec",
+    "sprayerCommission": "Prov. Sprüher",
+    "ambrasolCommission": "Prov. Ambrasol",
+    "matecraCommission": "Prov. Matecra",
+    "trainerRevenueCommission": "Prov. Trainer Umsatz",
+    "trainerSprayerCommission": "Prov. Trainer Sprüher",
+    "trainerAmbrasolCommission": "Prov. Trainer Ambrasol",
+    "upTo10000": "bis 10.000€",
+    "10000to15000": "10.000€ - 15.000€",
+    "moreThan15000": "> 15.000€",
+    "10000to20000": "10.000€ - 20.000€",
+    "moreThan20000": "> 20.000€",
+    "guaranteedCommission": "Garantieprovision",
+    "btrFluidWgr": "BTR-Fluid + WGR",
+    "starterBonusRefill": "Starterbonus Auffüllung",
+    "starterBonus": "Starterbonus",
+    "serviceAppointment": "Service Termine",
+    "uvvInspection": "UVV Prüfungen",
+    "invoiceIsGeneratedBySystem": "Invoice was created on a computer and is valid without the signature and seal."
+  },
+  "data": {
+    "date": "Aug, 24",
+    "salesName": "Assaker, Dany",
+    "salesVtId": "1272",
+    "salesVerkCode": "ASSAKERD",
+    "personalnr": "01257.",
+    "performanceOverviewTotal": "€1889.28",
+    "merchandiseRevenue": "€1889.28",
+    "otherRevenue": "€1889.28",
+    "ambrasolRevenue": "€1889.28",
+    "ambrasolRevenueSigma": "€1889.28",
+    "sprayerRevenue": "€1889.28",
+    "trainerMerchandiseRevenue": "€1889.28",
+    "trainerOtherRevenue": "€1889.28",
+    "trainerAmbrasolRevenue": "€1889.28",
+    "trainerSprayerRevenue": "€1889.28",
+    "trainerAuxilaryProductRevenue": "€0",
+    "btrWgrFluidTaps": "€1889.28",
+    "commissionRevenue": "€1889.28",
+    "serviceAppoinmentsNumber": "€0",
+    "inspectionOfUvvNumber": "€1889.28",
+    "commissionTotal": "€1889.28",
+    "ambratecCommission": "€1889.28",
+    "ambratecPercent": "10.0%",
+    "sprayerCommission": "€188.28",
+    "sprayerPercent": "1.0%",
+    "ambrasolCommission": "€1889.28",
+    "matecraCommission": "€1889.28",
+    "trainerRevenueCommission": "€1889.28",
+    "trainerSprayerCommission": "€1889.28",
+    "trainerAmbrasolCommission": "€1889.28",
+    "upTo10000": "€1889.28",
+    "10000to15000": "€1889.28",
+    "moreThan15000": "€1889.28",
+    "10000to20000": "€1889.28",
+    "moreThan20000": "€1889.28",
+    "guaranteedCommission": "€1889.28",
+    "btrFluidWgr": "€1889.28",
+    "starterBonusRefill": "€1889.28",
+    "starterBonus": "€1889.28",
+    "serviceAppointment": "€1889.28",
+    "uvvInspection": "€1889.28"
   }
 }

@@ -6,129 +6,395 @@
         alt="ambratect-logo" />
       <div class="mt-20 border-primary flex content-between">
         <div class="flex content-center flex-1 py-10">
-          <h1 class="font-lg spacing-lg">MONATSABRECHNUNG</h1>
+          <h1 class="font-lg spacing-lg">{{ content.monthlyStatement }}</h1>
         </div>
         <div class="flex align-items-center px-30 bg-color-black">
-          <p class="font-md color-background weight-semi-bold">Aug. 24</p>
+          <p class="font-md color-background weight-semi-bold">[[data.date]]</p>
         </div>
       </div>
     </header>
 
     <main>
       <table class="sales-info-table">
-
         <tr>
-          <th>Name :</th>
-          <td> [[#if content.salesInformation.name]] [[content.salesInformation.name]] [[else]] - [[/if]]</td>
+          <th>[[content.salesName]]:</th>
+          <td>[[#if data.salesName]] [[data.salesName]] [[else]] - [[/if]]</td>
         </tr>
         <tr>
-          <th>VT-ID :</th>
-          <td>[[#if content.salesInformation.vtId]] [[content.salesInformation.vtId]] [[else]] - [[/if]]</td>
+          <th>[[content.salesVtId]]:</th>
+          <td>[[#if data.salesVtId]] [[data.salesVtId]] [[else]] - [[/if]]</td>
         </tr>
         <tr>
-          <th>Verk. -CODE :</th>
-          <td>[[#if content.salesInformation.verkCode]] [[content.salesInformation.verkCode]] [[else]] - [[/if]]</td>
+          <th>[[content.salesVerkCode]]:</th>
+          <td>[[#if data.salesVerkCode]] [[data.salesVerkCode]] [[else]] - [[/if]]</td>
         </tr>
         <tr>
-          <th>Personalinr.:</th>
-          <td>[[#if content.salesInformation.personalnr]] [[content.salesInformation.personalnr]] [[else]] - [[/if]]
+          <th>[[content.personalnr]]:</th>
+          <td>[[#if data.personalnr]] [[data.personalnr]] [[else]] - [[/if]]
           </td>
         </tr>
       </table>
 
       <div class="performance-billing-container">
-        [[#if content.performanceOverviewDetails]]
-
         <div class="w-sm">
           <div class="__table-title">
-            <h2>1. [[constant.total.de]]</h2>
+            <h2>[[content.performanceOverview]]</h2>
           </div>
           <table class="__table-overview-performance">
-            [[#if content.performanceOverviewDetails.head]]
             <thead>
               <tr>
-                [[#each content.performanceOverviewDetails.head]]
-                <td class="is-number-emphasize">[[this]]</td>
-                [[/each]]
+                <td></td>
+                <td class="is-number-emphasize">[[content.umsatz]]</td>
+                <td class="is-number-emphasize">[[content.sigma]]</td>
               </tr>
             </thead>
-            [[/if]]
-            [[#if content.performanceOverviewDetails.data]]
+
             <tbody>
-              [[#each content.performanceOverviewDetails.data]]
+              [[#if data.merchandiseRevenue]]
               <tr>
-                <th>[[label]]:</th>
-                <td class="[[#if (function 'isNegative' amount)]]miscellaneous-value[[/if]]">[[function
-                  'formatCurrency'
-                  amount]]
-                </td>
-                <td class="is-number-emphasize [[#if (function 'isNegative' sigma)]]danger[[/if]]">[[#if sigma]]
-                  [[function 'formatCurrency'
-                  sigma]] [[/if]]</td>
+                <th>[[content.merchandiseRevenue]]:</th>
+                <td>[[data.merchandiseRevenue]]</td>
+                <td class="is-number-emphasize">[[data.merchandiseRevenueSigma]]</td>
               </tr>
-              [[/each]]
-            </tbody>
-            <tbody class="total-section">
+              [[/if]]
+              [[#if data.otherRevenue]]
               <tr>
-                <th>[[constant.total.de]]:</th>
-                <td>
-                  [[function 'totalPerformanceOverview' content.performanceOverviewDetails.data]]</td>
+                <th>[[content.otherRevenue]]:</th>
+                <td>[[data.otherRevenue]]</td>
+                <td class="is-number-emphasize">[[data.otherRevenueSigma]]</td>
               </tr>
+              [[/if]]
+              [[#if data.ambrasolRevenue]]
+              <tr>
+                <th>[[content.ambrasolRevenue]]:</th>
+                <td>[[data.ambrasolRevenue]]</td>
+                <td class="is-number-emphasize">[[data.ambrasolRevenueSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.sprayerRevenue]]
+              <tr>
+                <th>[[content.sprayerRevenue]]:</th>
+                <td>[[data.sprayerRevenue]]</td>
+                <td class="is-number-emphasize">[[data.sprayerRevenueSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.trainerMerchandiseRevenue]]
+              <tr>
+                <th>[[content.trainerMerchandiseRevenue]]:</th>
+                <td>[[data.trainerMerchandiseRevenue]]</td>
+                <td class="is-number-emphasize">[[data.trainerMerchandiseRevenueSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.trainerOtherRevenue]]
+              <tr>
+                <th>[[content.trainerOtherRevenue]]:</th>
+                <td>[[data.trainerOtherRevenue]]</td>
+                <td class="is-number-emphasize">[[data.trainerOtherRevenueSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.trainerAmbrasolRevenue]]
+              <tr>
+                <th>[[content.trainerAmbrasolRevenue]]:</th>
+                <td>[[data.trainerAmbrasolRevenue]]</td>
+                <td class="is-number-emphasize">[[data.trainerAmbrasolRevenueSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.trainerSprayerRevenue]]
+              <tr>
+                <th>[[content.trainerSprayerRevenue]]:</th>
+                <td>[[data.trainerSprayerRevenue]]</td>
+                <td class="is-number-emphasize">[[data.trainerSprayerRevenueSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.trainerAuxilaryProductRevenue]]
+              <tr>
+                <th>[[content.trainerAuxilaryProductRevenue]]:</th>
+                <td>[[data.trainerAuxilaryProductRevenue]]</td>
+                <td class="is-number-emphasize">[[data.trainerAuxilaryProductRevenueSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.btrWgrFluidTaps]]
+              <tr>
+                <th>[[content.btrWgrFluidTaps]]:</th>
+                <td>[[data.btrWgrFluidTaps]]</td>
+                <td class="is-number-emphasize">[[data.btrWgrFluidTapsSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.commissionRevenue]]
+              <tr>
+                <th>[[content.commissionRevenue]]:</th>
+                <td>[[data.commissionRevenue]]</td>
+                <td class="is-number-emphasize">[[data.commissionRevenueSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.serviceAppoinmentsNumber]]
+              <tr>
+                <th>[[content.serviceAppoinmentsNumber]]:</th>
+                <td>[[data.serviceAppoinmentsNumber]]</td>
+                <td class="is-number-emphasize">[[data.serviceAppoinmentsNumberSigma]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.inspectionOfUvvNumber]]
+              <tr>
+                <th>[[content.inspectionOfUvvNumber]]:</th>
+                <td>[[data.inspectionOfUvvNumber]]</td>
+                <td class="is-number-emphasize">[[data.inspectionOfUvvNumberSigma]]</td>
+              </tr>
+              [[/if]]
             </tbody>
-            [[/if]]
+            <tfoot>
+              <tr>
+                <th>[[content.total]]:</th>
+                <td>[[data.performanceOverviewTotal]]</td>
+              </tr>
+            </tfoot>
           </table>
         </div>
-        [[/if]]
 
-
-        [[#if content.serviceBillingDetails]]
         <div class="w-sm">
           <div class="__table-title">
-            <h2>2. [[constant.serviceBilling.de]]</h2>
+            <h2>[[content.serviceBilling]]</h2>
           </div>
           <table class="__table-billing-performance">
-            [[#if content.serviceBillingDetails.head]]
             <thead>
               <tr>
-                [[#each content.serviceBillingDetails.head]]
-                <td class="is-number-emphasize">[[this]]</td>
-                [[/each]]
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="is-number-emphasize">[[content.commission]]</td>
               </tr>
             </thead>
-            [[/if]]
-            [[#if content.serviceBillingDetails.data]]
             <tbody>
-              [[#each content.serviceBillingDetails.data]]
+              [[#if data.ambratecCommission]]
               <tr>
-                <td>[[this.code]]</td>
-                <td>[[this.label]]</td>
+                <td>[[content.ambratecCommission]]</td>
                 <td>
                   <div class="filled-chevron-right"></div>
                 </td>
-                <td class="is-number">[[this.percent]]</td>
-                <td class="is-number-emphasize [[#if (function 'isNegative' this.amount)]]miscellaneous-value[[/if]]">
-                  [[function 'formatCurrency' this.amount]]</td>
+                <td class="is-number">
+                  [[data.ambratecPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.ambratecCommission]]</td>
               </tr>
-              [[/each]]
-            </tbody>
-            [[/if]]
-
-            <tbody class="total-section">
+              [[/if]]
+              [[#if data.sprayerCommission]]
               <tr>
-                <th colspan="2">[[constant.commissionTotal.de]]:</th>
-                <td colspan="2"></td>
+                <td>[[content.sprayerCommission]]</td>
                 <td>
-                  [[function 'totalServiceBilling' content.serviceBillingDetails.data]]</td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.sprayerPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.sprayerCommission]]</td>
               </tr>
+              [[/if]]
+              [[#if data.ambrasolCommission]]
+              <tr>
+                <td>[[content.ambrasolCommission]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.ambrasolPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.ambrasolCommission]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.matecraCommission]]
+              <tr>
+                <td>[[content.matecraCommission]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.matecraPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.matecraCommission]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.trainerRevenueCommission]]
+              <tr>
+                <td>[[content.trainerRevenueCommission]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.trainerRevenuePercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.trainerRevenueCommission]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.trainerSprayerCommission]]
+              <tr>
+                <td>[[content.trainerSprayerCommission]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.trainerSprayerPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.trainerSprayerCommission]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.trainerAmbrasolCommission]]
+              <tr>
+                <td>[[content.trainerAmbrasolCommission]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.trainerAmbrasolPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.trainerAmbrasolCommission]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.upTo10000]]
+              <tr>
+                <td>[[content.upTo10000]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.upTo10000Percent]]
+                </td>
+                <td class="is-number-emphasize">[[data.upTo10000]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.10000to15000]]
+              <tr>
+                <td>[[content.10000to15000]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.10000to15000Percent]]
+                </td>
+                <td class="is-number-emphasize">[[data.10000to15000]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.moreThan15000]]
+              <tr>
+                <td>[[content.moreThan15000]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.moreThan15000Percent]]
+                </td>
+                <td class="is-number-emphasize">[[data.moreThan15000]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.10000to20000]]
+              <tr>
+                <td>[[content.10000to20000]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.10000to20000Percent]]
+                </td>
+                <td class="is-number-emphasize">[[data.10000to20000]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.moreThan20000]]
+              <tr>
+                <td>[[content.moreThan20000]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.moreThan20000Percent]]
+                </td>
+                <td class="is-number-emphasize">[[data.moreThan20000]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.guaranteedCommission]]
+              <tr>
+                <td>[[content.guaranteedCommission]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.guaranteedPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.guaranteedCommission]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.btrFluidWgr]]
+              <tr>
+                <td>[[content.btrFluidWgr]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.btrFluidWgrPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.btrFluidWgr]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.starterBonusRefill]]
+              <tr>
+                <td>[[content.starterBonusRefill]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.starterBonusRefillPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.starterBonusRefill]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.starterBonus]]
+              <tr>
+                <td>[[content.starterBonus]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.starterBonusPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.starterBonus]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.serviceAppointment]]
+              <tr>
+                <td>[[content.serviceAppointment]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.serviceAppointmentPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.serviceAppointment]]</td>
+              </tr>
+              [[/if]]
+              [[#if data.uvvInspection]]
+              <tr>
+                <td>[[content.uvvInspection]]</td>
+                <td>
+                  <div class="filled-chevron-right"></div>
+                </td>
+                <td class="is-number">
+                  [[data.uvvInspectionPercent]]
+                </td>
+                <td class="is-number-emphasize">[[data.uvvInspection]]</td>
+              </tr>
+              [[/if]]
             </tbody>
+
+            <tfoot>
+              <tr>
+                <td colspan="3">[[content.commissionTotal]]:</td>
+                <td>[[data.commissionTotal]]</td>
+              </tr>
+            </tfoot>
           </table>
         </div>
-        [[/if]]
       </div>
     </main>
     <footer>
-      Invoice was created on a computer and is valid without the signature and
-      seal.
+      [[content.invoiceIsGeneratedBySystem]]
     </footer>
   </div>
 </div>
