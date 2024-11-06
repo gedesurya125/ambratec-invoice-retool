@@ -87,7 +87,7 @@
         break;
       case "totalPerformanceOverview":
         const total = getTotalAmount(value)
-        return formatCurrency();
+        return formatCurrency(total);
         break;
       case "totalServiceBilling":
         const totalCommission = getTotalAmount(value)
