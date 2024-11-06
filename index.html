@@ -34,30 +34,6 @@
     document.head.append(style);
   }
 
-  function getTotalPerformanceOverview(parsedData) {
-    const performanceOverviewData = parsedData?.content?.performanceOverviewDetails
-    if (performanceOverviewData?.data) {
-      const totalSalesVolume = performanceOverviewData?.data.reduce((sum, item) => {
-        return sum + parseFloat(item.salesVolume);
-      }, 0).toFixed(2);
-
-      performanceOverviewData.totalSalesVolume = totalSalesVolume
-    }
-    return parsedData
-  }
-
-  function getTotalServiceTotal(parsedData) {
-    const serviceBillingData = parsedData?.content?.serviceBillingDetails
-    if (serviceBillingData?.data) {
-      const totalCommission = serviceBillingData?.data.reduce((sum, item) => {
-        return sum + parseFloat(item.commission);
-      }, 0).toFixed(2);
-
-      serviceBillingData.totalCommission = totalCommission
-    }
-    return parsedData
-  }
-
   // Main function
 
   async function renderTemplate() {
@@ -70,8 +46,6 @@
       .replace(/\]\]/g, "}}");
     const template = Handlebars.compile(handlebarTemplate);
     let parsedData = JSON.parse(dataString);
-    parsedData = getTotalPerformanceOverview(parsedData);
-    parsedData = getTotalServiceTotal(parsedData)
     console.log(parsedData)
 
     const html = template(parsedData);
@@ -81,21 +55,47 @@
 
   renderTemplate();
 
-  Handlebars.registerHelper('formatCurrency', function (value) {
-    if (value < 0) {
-      // Format negative number as "(€X,XXX.XX)"
-      return ` (€${Math.abs(value).toLocaleString('en-US', { minimumFractionDigits: 2 })})`;
+  Handlebars.registerHelper('function', function (functionName, value) {
+
+    function formatCurrency(value) {
+      if (value < 0) {
+        // Format negative number as "(€X,XXX.XX)"
+        return ` (€${Math.abs(value).toLocaleString('en-US', { minimumFractionDigits: 2 })})`;
+      }
+
+      return `€${parseFloat(value).toLocaleString('en-US', {
+        style: 'decimal',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      })}`
     }
 
-    return `€${parseFloat(value.replace(',', '.')).toLocaleString('en-US', {
-      style: 'decimal',
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    })
-      }`
-  });
+    function getTotalAmount(value) {
+      const total = value.reduce((sum, item) => {
+        return sum + parseFloat(item.amount);
+      }, 0).toFixed(2);
 
-  Handlebars.registerHelper('isNegative', function (value) {
-    return value < 0;
+      return total
+    }
+
+    switch (functionName) {
+      case "isNegative":
+        return value < 0;
+        break;
+      case "formatCurrency":
+        formatCurrency(value)
+        break;
+      case "totalPerformanceOverview":
+        const total = getTotalAmount(value)
+        return formatCurrency();
+        break;
+      case "totalServiceBilling":
+        const totalCommission = getTotalAmount(value)
+        return formatCurrency(totalCommission)
+        break;
+      default:
+        break
+    }
   })
+
 </script>

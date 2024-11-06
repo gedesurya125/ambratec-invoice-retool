@@ -23,24 +23,24 @@
     "performanceOverviewDetails": {
       "head": ["", "UMSATZ", "Σ"],
       "data": [
-        { "label": "Umsatz Handelsware", "salesVolume": "1889.28" },
-        { "label": "Umsatz Sonstige", "salesVolume": "528.36" },
-        { "label": "Umsatz Ambrasol", "salesVolume": "0" },
-        { "label": "Umsatz Sprüher", "salesVolume": "0" },
+        { "label": "Umsatz Handelsware", "amount": 1889.28 },
+        { "label": "Umsatz Sonstige", "amount": 528.36 },
+        { "label": "Umsatz Ambrasol", "amount": 0 },
+        { "label": "Umsatz Sprüher", "amount": 0 },
 
-        { "label": "Trainer-Umsatz Handelsware", "salesVolume": "-6219.60" },
+        { "label": "Trainer-Umsatz Handelsware", "amount": -6219.6 },
         {
           "label": "Trainer-Umsatz Sonstige",
-          "salesVolume": "0.00",
-          "sigma": "8637.24"
+          "amount": 0.0,
+          "sigma": 8637.24
         },
-        { "label": "Trainer Umsatz - Ambrasol", "salesVolume": "0" },
-        { "label": "Trainer Umsatz - Sprüher", "salesVolume": "0" },
-        { "label": "Trainer Umsatz -Hilfsprodukte", "salesVolume": "0" },
-        { "label": "BTR/WGR Fluid + Taps", "salesVolume": "0" },
-        { "label": "Umsatz Provisions - %", "salesVolume": "0" },
-        { "label": "Anzahl der Service Termine", "salesVolume": "0" },
-        { "label": "Anzahl der UVV Prüfungen", "salesVolume": "0" }
+        { "label": "Trainer Umsatz - Ambrasol", "amount": 0 },
+        { "label": "Trainer Umsatz - Sprüher", "amount": 0 },
+        { "label": "Trainer Umsatz -Hilfsprodukte", "amount": 0 },
+        { "label": "BTR/WGR Fluid + Taps", "amount": 0 },
+        { "label": "Umsatz Provisions - %", "amount": 0 },
+        { "label": "Anzahl der Service Termine", "amount": 0 },
+        { "label": "Anzahl der UVV Prüfungen", "amount": 0 }
       ]
     },
 
@@ -51,109 +51,109 @@
           "code": "170",
           "label": "Prov. ambratec",
           "percent": "10.0%",
-          "commission": "863.72"
+          "amount": 863.72
         },
         {
           "code": "237",
           "label": "Prov. Sprüher",
           "percent": "10.0%",
-          "commission": "36.52"
+          "amount": 36.52
         },
         {
           "code": "236",
           "label": "Prov. Ambrosol",
           "percent": "10.0%",
-          "commission": "4.44"
+          "amount": 4.44
         },
         {
           "code": "236",
           "label": "Prov. Matecra",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "Prov. Trainer Umsatz",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "Prov. Trainer Sprüher",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "Prov. Trainer Ambrasol",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "bis 10.000€",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "10.000€ - 15.000€",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "> 15.000€",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "10.000€ - 20.000€",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "> 20.000€",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "Garantieprovision",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "BTR-Fluid + WGR",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "Starterbonus Auffüllung",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "Starterbonus",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "Service Termine",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         },
         {
           "code": "236",
           "label": "UVV Prüfungen",
           "percent": "0%",
-          "commission": "0"
+          "amount": 0
         }
       ]
     }
