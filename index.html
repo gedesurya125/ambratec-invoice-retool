@@ -74,7 +74,7 @@
     parsedData = getTotalServiceTotal(parsedData)
     console.log(parsedData)
 
-    const html = template(Object.assign({}, parsedData.content, parsedData.constant));
+    const html = template(parsedData);
     addStyle(cssString);
     document.body.innerHTML = html;
   }

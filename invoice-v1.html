@@ -19,111 +19,116 @@
 
         <tr>
           <th>Name :</th>
-          <td> {{#if salesInformation.name}} [[salesInformation.name]] {{else}} - {{/if}}</td>
+          <td> [[#if content.salesInformation.name]] [[content.salesInformation.name]] [[else]] - [[/if]]</td>
         </tr>
         <tr>
           <th>VT-ID :</th>
-          <td>{{#if salesInformation.vtId}} [[salesInformation.vtId]] {{else}} - {{/if}}</td>
+          <td>[[#if content.salesInformation.vtId]] [[content.salesInformation.vtId]] [[else]] - [[/if]]</td>
         </tr>
         <tr>
           <th>Verk. -CODE :</th>
-          <td>{{#if salesInformation.verkCode}} [[salesInformation.verkCode]] {{else}} - {{/if}}</td>
+          <td>[[#if content.salesInformation.verkCode]] [[content.salesInformation.verkCode]] [[else]] - [[/if]]</td>
         </tr>
         <tr>
           <th>Personalinr.:</th>
-          <td>{{#if salesInformation.personalnr}} [[salesInformation.personalnr]] {{else}} - {{/if}}</td>
+          <td>[[#if content.salesInformation.personalnr]] [[content.salesInformation.personalnr]] [[else]] - [[/if]]
+          </td>
         </tr>
       </table>
 
       <div class="performance-billing-container">
-        {{#if performanceOverviewDetails}}
+        [[#if content.performanceOverviewDetails]]
 
         <div class="w-sm">
           <div class="__table-title">
-            <h2>1. {{total.de}}</h2>
+            <h2>1. [[constant.total.de]]</h2>
           </div>
           <table class="__table-overview-performance">
-            {{#if performanceOverviewDetails.head}}
+            [[#if content.performanceOverviewDetails.head]]
             <thead>
               <tr>
-                {{#each performanceOverviewDetails.head}}
-                <td class="is-number-emphasize">{{this}}</td>
-                {{/each}}
+                [[#each content.performanceOverviewDetails.head]]
+                <td class="is-number-emphasize">[[this]]</td>
+                [[/each]]
               </tr>
             </thead>
-            {{/if}}
-            {{#if performanceOverviewDetails.data}}
+            [[/if]]
+            [[#if content.performanceOverviewDetails.data]]
             <tbody>
-              {{#each performanceOverviewDetails.data}}
+              [[#each content.performanceOverviewDetails.data]]
               <tr>
-                <th>{{label}}:</th>
-                <td class="{{#if (isNegative salesVolume)}}miscellaneous-value{{/if}}">{{formatCurrency salesVolume}}
+                <th>[[label]]:</th>
+                <td class="[[#if (isNegative salesVolume)]]miscellaneous-value[[/if]]">[[formatCurrency
+                  salesVolume]]
                 </td>
-                <td class="is-number-emphasize {{#if (isNegative sigma)}}danger{{/if}}">{{#if sigma}} {{formatCurrency
-                  sigma}} {{/if}}</td>
+                <td class="is-number-emphasize [[#if (isNegative sigma)]]danger[[/if]]">[[#if sigma]]
+                  [[formatCurrency
+                  sigma]] [[/if]]</td>
               </tr>
-              {{/each}}
+              [[/each]]
             </tbody>
-            {{#if performanceOverviewDetails.totalSalesVolume}}
+            [[#if content.performanceOverviewDetails.totalSalesVolume]]
             <tbody class="total-section">
               <tr>
-                <th>{{total.de}}:</th>
-                <td class="{{#if (isNegative performanceOverviewDetails.totalSalesVolume)}}miscellaneous-value{{/if}}">
-                  {{formatCurrency
-                  performanceOverviewDetails.totalSalesVolume}}</td>
+                <th>[[constant.total.de]]:</th>
+                <td
+                  class="[[#if (isNegative content.performanceOverviewDetails.totalSalesVolume)]]miscellaneous-value[[/if]]">
+                  [[formatCurrency
+                  content.performanceOverviewDetails.totalSalesVolume]]</td>
               </tr>
             </tbody>
-            {{/if}}
-            {{/if}}
+            [[/if]]
+            [[/if]]
           </table>
         </div>
-        {{/if}}
+        [[/if]]
 
 
-        {{#if serviceBillingDetails}}
+        [[#if content.serviceBillingDetails]]
         <div class="w-sm">
           <div class="__table-title">
-            <h2>2. {{serviceBilling.de}}</h2>
+            <h2>2. [[constant.serviceBilling.de]]</h2>
           </div>
           <table class="__table-billing-performance">
-            {{#if serviceBillingDetails.head}}
+            [[#if content.serviceBillingDetails.head]]
             <thead>
               <tr>
-                {{#each serviceBillingDetails.head}}
-                <td class="is-number-emphasize">{{this}}</td>
-                {{/each}}
+                [[#each content.serviceBillingDetails.head]]
+                <td class="is-number-emphasize">[[this]]</td>
+                [[/each]]
               </tr>
             </thead>
-            {{/if}}
-            {{#if serviceBillingDetails.data}}
+            [[/if]]
+            [[#if content.serviceBillingDetails.data]]
             <tbody>
-              {{#each serviceBillingDetails.data}}
+              [[#each content.serviceBillingDetails.data]]
               <tr>
-                <td>{{this.code}}</td>
-                <td>{{this.label}}</td>
+                <td>[[this.code]]</td>
+                <td>[[this.label]]</td>
                 <td>
                   <div class="filled-chevron-right"></div>
                 </td>
-                <td class="is-number">{{this.percent}}</td>
-                <td class="is-number-emphasize {{#if (isNegative this.commission)}}miscellaneous-value{{/if}}">{{#if
-                  this.commission}} {{formatCurrency this.commission}}{{/if}}</td>
+                <td class="is-number">[[this.percent]]</td>
+                <td class="is-number-emphasize [[#if (isNegative this.commission)]]miscellaneous-value[[/if]]">[[#if
+                  this.commission]] [[formatCurrency this.commission]][[/if]]</td>
               </tr>
-              {{/each}}
+              [[/each]]
             </tbody>
-            {{/if}}
-            {{#if serviceBillingDetails.totalCommission}}
+            [[/if]]
+            [[#if content.serviceBillingDetails.totalCommission]]
             <tbody class="total-section">
               <tr>
-                <th colspan="2">{{commissionTotal.de}}:</th>
+                <th colspan="2">[[constant.commissionTotal.de]]:</th>
                 <td colspan="2"></td>
-                <td class="{{#if (isNegative serviceBillingDetails.totalCommission)}}miscellaneous-value{{/if}}">
-                  {{formatCurrency serviceBillingDetails.totalCommission}}</td>
+                <td
+                  class="[[#if (isNegative content.serviceBillingDetails.totalCommission)]]miscellaneous-value[[/if]]">
+                  [[formatCurrency content.serviceBillingDetails.totalCommission]]</td>
               </tr>
             </tbody>
-            {{/if}}
+            [[/if]]
           </table>
         </div>
-        {{/if}}
+        [[/if]]
       </div>
     </main>
     <footer>
