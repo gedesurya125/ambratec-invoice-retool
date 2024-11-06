@@ -30,7 +30,7 @@ header {
 .sales-info-table tr td,
 .sales-info-table tr th {
   font-weight: normal;
-  font-size: 12px;
+  font-size: 11pt;
   padding: 5px;
 }
 
@@ -62,7 +62,7 @@ header {
 
 .__table-title h2 {
   text-align: center;
-  font-size: 14px;
+  font-size: 12pt;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -143,21 +143,36 @@ table tbody td.number {
   border-bottom: 1px dotted black;
 }
 
+thead tr td,
+thead tr th {
+  font-size: 9pt;
+  text-align: center;
+  padding: 5px 10px;
+}
+
 thead tr td {
-  font-size: 10px;
+  font-size: 8pt;
   text-align: center;
   padding: 5px 10px;
 }
 
 tbody tr th,
-td {
-  font-size: 12px;
+tbody tr td {
+  font-size: 10.5pt;
+  white-space: nowrap
+}
+
+tfoot {
+  border-bottom: 2px solid black;
 }
 
 tfoot tr th,
-td {
-  font-size: 12px;
+tfoot tr td {
+  font-size: 10.5pt;
+  padding-top: 20px;
+  font-weight: bold;
 }
+
 
 footer {
   font-size: 10px;
@@ -195,11 +210,11 @@ footer {
 }
 
 .font-md {
-  font-size: 14px;
+  font-size: 11pt;
 }
 
 .font-lg {
-  font-size: 12px;
+  font-size: 12pt;
 }
 
 .spacing-lg {
