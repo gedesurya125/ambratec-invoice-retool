@@ -137,6 +137,28 @@ main {
   font-size: 11pt;
 }
 
+.__table-summary-account tbody tr th {
+  text-align: center;
+  font-weight: bold;
+}
+
+.__table-summary-account tbody tr td {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.commission-settlement {
+  margin-top: 7rem;
+}
+
+.__table-service-billing {
+  margin-top: 0rem;
+}
+
+/* .__table-commission-billing {
+  table-layout: auto;
+} */
+
 table {
   width: 100%;
   margin-top: 30px;
@@ -152,6 +174,10 @@ table thead td.is-number-emphasize {
 table tbody td.is-number-emphasize {
   font-weight: bold;
   text-align: right;
+}
+
+table tbody td.emphasize {
+  font-weight: bold;
 }
 
 table tbody td.is-number,
@@ -170,7 +196,7 @@ tfoot {
 
 tfoot tr th,
 tfoot tr td {
-  font-size: 12pt;
+  font-size: 11pt;
   padding-top: 20px;
   font-weight: bold;
 }
@@ -290,6 +316,10 @@ footer {
   flex-direction: column;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -331,4 +361,8 @@ footer {
   border-left: 10px solid black;
   /* Color for the fill */
   display: inline-block;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }

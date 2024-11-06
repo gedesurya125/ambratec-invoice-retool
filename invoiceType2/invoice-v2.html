@@ -77,6 +77,7 @@
                     </tbody>
                 </table>
             </div>
+
             <div class="commission-billing section">
                 <div class="__table-title">
                     <h2>[[content.commissionBilling]]</h2>
@@ -85,17 +86,426 @@
                     <tbody>
                         [[#if data.salesVolume]]
                         <tr>
-                            <td>[[content.salesVolume]]</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="w-sm">1. [[content.salesVolume]]</td>
+                            <td class="is-number-emphasize">[[data.salesVolumeSecondColumn]]</td>
+                            <td class="is-number">[[data.salesVolumeThirdColumn]]</td>
+                            <td class="is-number">[[data.salesVolumeFourthColumn]]</td>
                             <td class="is-number">[[data.salesVolume]]</td>
                         </tr>
                         [[/if]]
-
+                        [[#if data.commissionInPercent]]
+                        <tr>
+                            <td>2. [[content.commissionInPercent]]</td>
+                            <td class="is-number-emphasize">[[data.commissionInPercentSecondColumn]]</td>
+                            <td class="is-number">[[data.commissionInPercentThirdColumn]]</td>
+                            <td class="is-number">[[data.commissionInPercentFourthColumn]]</td>
+                            <td class="is-number">[[data.commissionInPercent]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.commissionInPercent]]
+                        <tr>
+                            <td>3. [[content.compensationFeeCommissionInPercent]]</td>
+                            <td class="is-number-emphasize">[[data.compensationFeeCommissionInPercentSecondColumn]]</td>
+                            <td class="is-number">[[data.compensationFeeCommissionInPercentThirdColumn]]</td>
+                            <td class="is-number">[[data.compensationFeeCommissionInPercentFourthColumn]]</td>
+                            <td class="is-number">[[data.compensationFeeCommissionInPercent]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.sprayerCommission]]
+                        <tr>
+                            <td>4. [[content.sprayerCommission]]</td>
+                            <td class="is-number-emphasize">[[data.sprayerCommissionSecondColumn]]</td>
+                            <td class="is-number">[[data.sprayerCommissionThirdColumn]]</td>
+                            <td class="is-number">[[data.sprayerCommissionFourthColumn]]</td>
+                            <td class="is-number">[[data.sprayerCommission]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.commissionInPercent]]
+                        <tr>
+                            <td>5. [[content.compensationFeeSprayerInPercent]]</td>
+                            <td class="is-number-emphasize">[[data.compensationFeeSprayerInPercentSecondColumn]]</td>
+                            <td class="is-number">[[data.compensationFeeSprayerInPercentThirdColumn]]</td>
+                            <td class="is-number">[[data.compensationFeeSprayerInPercentFourthColumn]]</td>
+                            <td class="is-number">[[data.compensationFeeSprayerInPercent]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.other]]
+                        <tr>
+                            <td>6. [[content.other]]</td>
+                            <td class="is-number-emphasize">[[data.otherSecondColumn]]</td>
+                            <td class="is-number">[[data.otherThirdColumn]]</td>
+                            <td class="is-number">[[data.otherFourthColumn]]</td>
+                            <td class="is-number">[[data.other]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.ambrasolRevenue]]
+                        <tr>
+                            <td>7. [[content.ambrasolRevenue]]</td>
+                            <td class="is-number-emphasize">[[data.ambrasolRevenueSecondColumn]]</td>
+                            <td class="is-number">[[data.ambrasolRevenueThirdColumn]]</td>
+                            <td class="is-number">[[data.ambrasolRevenueFourthColumn]]</td>
+                            <td class="is-number">[[data.ambrasolRevenue]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.compensationFeeIncludedInAmbrasolCommission5Percent]]
+                        <tr>
+                            <td>8. [[content.compensationFeeIncludedInAmbrasolCommission5Percent]]</td>
+                            <td class="is-number-emphasize">
+                                [[data.compensationFeeIncludedInAmbrasolCommission5PercentSecondColumn]]</td>
+                            <td class="is-number">
+                                [[data.compensationFeeIncludedInAmbrasolCommission5PercentThirdColumn]]</td>
+                            <td class="is-number">
+                                [[data.compensationFeeIncludedInAmbrasolCommission5PercentFourthColumn]]</td>
+                            <td class="is-number">[[data.compensationFeeIncludedInAmbrasolCommission5Percent]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.quarterlyOrAnnualBonus]]
+                        <tr>
+                            <td>9. [[content.quarterlyOrAnnualBonus]]</td>
+                            <td class="is-number-emphasize">[[data.quarterlyOrAnnualBonusSecondColumn]]</td>
+                            <td class="is-number">[[data.quarterlyOrAnnualBonusThirdColumn]]</td>
+                            <td class="is-number">[[data.quarterlyOrAnnualBonusFourthColumn]]</td>
+                            <td class="is-number">[[data.quarterlyOrAnnualBonus]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.competition]]
+                        <tr>
+                            <td>10. [[content.competition]]</td>
+                            <td class="is-number-emphasize">[[data.competitionSecondColumn]]</td>
+                            <td class="is-number">[[data.competitionThirdColumn]]</td>
+                            <td class="is-number">[[data.competitionFourthColumn]]</td>
+                            <td class="is-number">[[data.competition]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.totalCommissionNet]]
+                        <tr>
+                            <td class="emphasize">[[content.totalCommissionNet]]</td>
+                            <td class="is-number-emphasize">[[data.totalCommissionNetSecondColumn]]</td>
+                            <td class="is-number">[[data.totalCommissionNetThirdColumn]]</td>
+                            <td class="is-number">[[data.totalCommissionNetFourthColumn]]</td>
+                            <td class="is-number-emphasize">[[data.totalCommissionNet]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.refunds]]
+                        <tr>
+                            <td>11. [[content.refunds]]</td>
+                            <td class="is-number-emphasize">[[data.refundsSecondColumn]]</td>
+                            <td class="is-number">[[data.refundsThirdColumn]]</td>
+                            <td class="is-number">[[data.refundsFourthColumn]]</td>
+                            <td class="is-number">[[data.refunds]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.refundsNet]]
+                        <tr>
+                            <td class="emphasize">[[content.refundsNet]]</td>
+                            <td class="is-number-emphasize">[[data.refundsNetSecondColumn]]</td>
+                            <td class="is-number">[[data.refundsNetThirdColumn]]</td>
+                            <td class="is-number">[[data.refundsNetFourthColumn]]</td>
+                            <td class="is-number-emphasize">[[data.refundsNet]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.plusVat]]
+                        <tr>
+                            <td>[[content.plusVat]]</td>
+                            <td class="is-number-emphasize">[[data.plusVatSecondColumn]]</td>
+                            <td class="is-number">[[data.plusVatThirdColumn]]</td>
+                            <td class="is-number">[[data.plusVatFourthColumn]]</td>
+                            <td class="is-number">[[data.plusVat]]</td>
+                        </tr>
+                        [[/if]]
                     </tbody>
+                    [[#if data.totalCommissionGross]]
+                    <tfoot>
+                        <tr>
+                            <td>[[content.totalCommissionGross]]</td>
+                            <td class="is-number-emphasize">[[data.totalCommissionGrossSecondColumn]]</td>
+                            <td class="is-number">[[data.totalCommissionGrossThirdColumn]]</td>
+                            <td class="is-number">[[data.totalCommissionGrossFourthColumn]]</td>
+                            <td class="is-number">[[data.totalCommissionGross]]</td>
+                        </tr>
+                    </tfoot>
+                    [[/if]]
                 </table>
             </div>
+
+            <div class="deduction-or-credit section">
+                <div class="__table-title">
+                    <h2 class="uppercase">III. [[content.deductionOrCredit]]</h2>
+                </div>
+                <table class="__table-deduction-or-credit">
+                    <tbody>
+                        [[#if data.otherDeduction]]
+                        <tr>
+                            <td class="w-sm">[[content.other]]</td>
+                            <td class="is-number">[[data.otherDeduction]]</td>
+                            <td class="is-number"></td>
+                        </tr>
+                        [[/if]]
+                    </tbody>
+                    [[#if data.subtotalDeduction]]
+                    <tfoot>
+                        <tr>
+                            <td>[[content.subtotal]]</td>
+                            <td class="is-number">[[data.subtotalDeduction]]</td>
+                            <td class="is-number">[[data.totalAfterDeduction]]</td>
+                        </tr>
+                    </tfoot>
+                    [[/if]]
+                </table>
+            </div>
+            <div class="payout section">
+                <div class="__table-title">
+                    <h2>IV. [[content.payout]]</h2>
+                </div>
+                <table class="__table-payout">
+                    <tbody>
+                        [[#if data.totalCommissionGross]]
+                        <tr>
+                            <td class="w-sm">[[content.totalCommissionGross]]</td>
+                            <td class="is-number">[[data.totalCommissionGross]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.minusPromotionGiftDebt]]
+                        <tr>
+                            <td>[[content.minusPromotionGiftDebt]]</td>
+                            <td class="is-number">[[data.minusPromotionGiftDebt]]</td>
+                        </tr>
+                        [[/if]]
+                    </tbody>
+
+                    [[#if data.payoutAmount]]
+                    <tfoot>
+                        <tr>
+                            <td>[[content.payoutAmount]]</td>
+                            <td class="is-number">[[data.payoutAmount]]</td>
+                        </tr>
+                    </tfoot>
+                    [[/if]]
+
+                </table>
+            </div>
+
+            <div class="promotion-gifts section">
+                <div class="__table-title">
+                    <h2>V. [[content.promotionalAndGiveawayItemCredit]]</h2>
+                </div>
+                <table class="__table-payout">
+                    <tbody>
+                        [[#if data.promotionalGiftsCreditPromotionalItemsInPercent]]
+                        <tr>
+                            <td class="w-sm">[[content.promotionalGiftsCreditPromotionalItemsInPercent]]</td>
+                            <td class="is-number-emphasize">
+                                [[data.promotionalGiftsCreditPromotionalItemsInPercentSecondColumn]]
+                            </td>
+                            <td class="is-number">[[data.promotionalGiftsCreditPromotionalItemsInPercent]]</td>
+                            <td></td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.promotionalGiftCreditPromotionsInPercentOfSales]]
+                        <tr>
+                            <td class="w-sm">[[content.promotionalGiftCreditPromotionsInPercentOfSales]]</td>
+                            <td class="is-number-emphasize">
+                                [[data.promotionalGiftCreditPromotionsInPercentOfSalesSecondColumn]]
+                            </td>
+                            <td class="is-number">[[data.promotionalGiftCreditPromotionsInPercentOfSales]]</td>
+                            <td></td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.wgBonusSalesInAmount]]
+                        <tr>
+                            <td class="w-sm">[[content.wgBonusSalesInAmount]]</td>
+                            <td class="is-number-emphasize">[[data.wgBonusSalesInAmountSecondColumn]]
+                            </td>
+                            <td class="is-number">[[data.wgBonusSalesInAmount]]</td>
+                            <td></td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.wgBonusInPercent]]
+                        <tr>
+                            <td class="w-sm">[[content.wgBonusInPercent]]</td>
+                            <td class="is-number-emphasize">[[data.wgBonusInPercentSecondColumn]]
+                            </td>
+                            <td class="is-number">[[data.wgBonusInPercent]]</td>
+                            <td></td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.wgBonusPlusVat]]
+                        <tr>
+                            <td class="w-sm">[[content.plusVat]]</td>
+                            <td class="is-number-emphasize">[[data.wgBonusPlusVatSecondColumn]]
+                            </td>
+                            <td class="is-number">[[data.wgBonusPlusVat]]</td>
+                            <td></td>
+                        </tr>
+                        [[/if]]
+                    </tbody>
+
+                    [[#if data.totalAfterBonus]]
+                    <tfoot>
+                        <tr>
+                            <td>[[content.total]]</td>
+                            <td></td>
+                            <td class="is-number">[[data.totalAfterBonus]]</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                    [[/if]]
+
+                </table>
+            </div>
+
+            <div class="signed-section">
+                <div class="will-sign">
+                    <div>
+                        <p>[[content.ambratecGmbH]]</p>
+                        <p>[[data.issuedDate]]</p>
+                    </div>
+                    <p>[[data.ambratecReps]]</p>
+                </div>
+                <div class="will-sign">
+                    <p>[[content.inCharge]]: [[data.inChargeOf]]</p>
+                    <p>[[data.inChargeBy]]</p>
+                </div>
+            </div>
+
+            <div class="statement">
+                <p>[[content.originalInvoiceIssuedOf]] [[data.contractDate]] [[content.withInterimChanges]]</p>
+            </div>
+
+            <div class="summary-account">
+                <div class="__head">
+                    <p>
+                        [[content.accountPromotionalGifts]]
+                    </p>
+                    <p>
+                        [[content.asOf]]
+                    </p>
+                    <p>
+                        [[data.issuedDate]]
+                    </p>
+                </div>
+                <table class="__table-summary-account">
+                    <tr>
+                        <th>[[content.carryOverFromPreviousMonth]]</th>
+                        <th>[[content.credit]]</th>
+                        <th>[[content.deliveredOrReturned]]</th>
+                        <th>[[content.accountBalance]]</th>
+                    </tr>
+                    <tr>
+                        <td>[[data.carryOverFromPreviousMonth]]</td>
+                        <td>[[data.credit]]</td>
+                        <td>[[data.deliveredOrReturned]]</td>
+                        <td class="emphasize">[[data.accountBalance]]</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="commission-settlement">
+                <h4>[[content.postingDocumentForCommissionSettlement]]</h4>
+                <div class="flex content-between">
+                    <p>[[data.postingDocumentForCommissionSettlementTeam]]</p>
+                    <p>[[data.postingDocumentForCommissionSettlementCode]]</p>
+                </div>
+                <div class="mt-6">
+                    <p>[[data.name]]</p>
+                    <p>[[data.address]]</p>
+                    <p>[[data.address2]]</p>
+                </div>
+
+                <div class="mt-6 flex content-between">
+                    <div class="flex gap-12">
+                        <p>[[content.billingNumber]]:</p>
+                        <p>[[data.billingNumber]]</p>
+                        <p>[[data.billingNumberMonth]]</p>
+                    </div>
+                    <p>[[data.issuedMonth]]</p>
+                </div>
+                <div class="mt-3 flex content-between">
+                    <p>[[content.commissionRateOrSales]]</p>
+                    <p>[[data.commissionRateOrSalesPercent]]</p>
+                    <p>[[data.commissionRateOrSalesAmount]]</p>
+                </div>
+
+                <div class="mt-3 __service-billing">
+                    <h4>[[content.serviceBilling]]</h4>
+                    <table class="__table-service-billing">
+                        [[#if data.totalCommission]]
+                        <tr>
+                            <td>[[content.totalCommission]]</td>
+                            <td>[[data.totalCommissionSecondColumn]]</td>
+                            <td class="emphasize">[[data.totalCommissionThirdColumn]]</td>
+                            <td class="emphasize">[[data.totalCommissionFourthColumn]]</td>
+                            <td class="is-number">[[data.totalCommission]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.costCoverageHv]]
+                        <tr>
+                            <td>[[content.costCoverageHv]]</td>
+                            <td>[[data.costCoverageHvSecondColumn]]</td>
+                            <td class="emphasize">[[data.costCoverageHvThirdColumn]]</td>
+                            <td class="emphasize">[[data.costCoverageHvFourthColumn]]</td>
+                            <td class="is-number">[[data.costCoverageHv]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.bonusHv]]
+                        <tr>
+                            <td>[[content.bonusHv]]</td>
+                            <td>[[data.bonusHvSecondColumn]]</td>
+                            <td class="emphasize">[[data.bonusHvThirdColumn]]</td>
+                            <td class="emphasize">[[data.bonusHvFourthColumn]]</td>
+                            <td class="is-number">[[data.bonusHv]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.serviceBillingFourthRow]]
+                        <tr>
+                            <td>[[content.serviceBillingFourthRow]]</td>
+                            <td>[[data.serviceBillingFourthRowSecondColumn]]</td>
+                            <td class="emphasize">[[data.serviceBillingFourthRowThirdColumn]]</td>
+                            <td class="emphasize">[[data.serviceBillingFourthRowFourthColumn]]</td>
+                            <td class="is-number">[[data.serviceBillingFourthRow]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.serviceBillingFifthRow]]
+                        <tr>
+                            <td>[[content.serviceBillingFifthRow]]</td>
+                            <td>[[data.serviceBillingFifthRowSecondColumn]]</td>
+                            <td class="emphasize">[[data.serviceBillingFifthRowThirdColumn]]</td>
+                            <td class="emphasize">[[data.serviceBillingFifthRowFourthColumn]]</td>
+                            <td class="is-number">[[data.serviceBillingFifthRow]]</td>
+                        </tr>
+                        [[/if]]
+                        <tr>
+                            <td class="emphasize" colspan="4">[[content.totalCommissionGross]]</td>
+                            <td class="is-number-emphasize">[[data.serviceBillingTotalCommissionGross]]</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">[[content.examinationAbrg]]</td>
+                            <td class="is-number">[[data.examinationAbrg]]</td>
+                        </tr>
+                    </table>
+
+
+
+                    <div class="mt-6">
+
+                    </div>
+
+                    <div class="mt-6">
+                        <p>[[content.attentionNewBankDetails]]</p>
+                        <div class=" flex content-between">
+                            <p>[[content.accountDetails]]</p>
+                            <div>
+                                <p>[[data.bankAccountDetails]]</p>
+                                <p>[[data.bankAccountBic]]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </main>
         <footer>
             <p>[[content.ambratecAddress1]]</p>
