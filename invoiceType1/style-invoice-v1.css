@@ -159,6 +159,7 @@ thead tr td {
 tbody tr th,
 tbody tr td {
   font-size: 10.5pt;
+  white-space: nowrap
 }
 
 tfoot {

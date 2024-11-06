@@ -62,8 +62,12 @@ main {
 }
 
 .billingDetails p {
-  font-size: 12pt;
+  font-size: 11pt;
   font-weight: bold;
+}
+
+.billingDetails .code {
+  font-size: 9pt;
 }
 
 .signed-section {
@@ -122,55 +126,20 @@ main {
   font-weight: bold;
 }
 
-
-
-
-.performance-billing-container {
-  width: 100%;
-  gap: 5%;
-  display: flex;
-  margin-top: 30px;
-}
-
 .__table-title {
   background-color: rgb(215, 215, 215);
   border: 1px solid black;
+  padding: 5px 10px;
 }
 
 .__table-title h2 {
   text-align: left;
   font-size: 11pt;
-  padding: 10px;
-}
-
-.performance-billing-container table {
-  margin-top: 50px;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.performance-billing-container tbody td,
-.performance-billing-container tbody th {
-  padding: 5px 10px;
-}
-
-
-.performance-billing-container .total-section {
-  border-top: 1px solid black;
-  border-bottom: 3px solid black;
-}
-
-.performance-billing-container .total-section th,
-.performance-billing-container .total-section td {
-  font-weight: bold;
-  text-align: right;
-}
-
-.miscellaneous-value {
-  color: red
 }
 
 table {
+  width: 100%;
+  margin-top: 30px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -253,12 +222,16 @@ footer {
   padding-bottom: 10px;
 }
 
+.font-sm {
+  font-size: 10pt;
+}
+
 .font-md {
-  font-size: 14px;
+  font-size: 11pt;
 }
 
 .font-lg {
-  font-size: 16px;
+  font-size: 12pt;
 }
 
 .spacing-lg {

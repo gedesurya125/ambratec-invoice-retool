@@ -5,26 +5,14 @@
                 <h1 class="font-lg spacing-lg">[[content.monthlyStatement]]</h1>
                 <div class="monthly-statement-details">
                     <div>
-                        <p class="title">
-                            [[content.employee]]
-                        </p>
-                        <p>
-                            [[data.name]]
-                        </p>
-                        <p>
-                            [[data.address]]
-                        </p>
-                        <p>
-                            [[data.address2]]
-                        </p>
+                        <p class="title"> [[content.employee]] </p>
+                        <p> [[data.name]] </p>
+                        <p> [[data.address]]</p>
+                        <p>[[data.address2]]</p>
                     </div>
                     <div>
-                        <p class="title">
-                            [[content.month]]
-                        </p>
-                        <p>
-                            [[data.issuedMonth]]
-                        </p>
+                        <p class="title"> [[content.month]]</p>
+                        <p>[[data.issuedMonth]]</p>
                     </div>
                 </div>
             </div>
@@ -38,33 +26,75 @@
         <main>
             <div class="flex content-between gap-12">
                 <div class="billingDetails">
-                    <p>
-                        [[content.billingNumber]]:
-                    </p>
-                    <p>
-                        [[billingDetails.billingNumber]]
-                    </p>
-                    <p>
-                        [[billingDetails.date]]
-                    </p>
-
+                    <p>[[content.billingNumber]]:</p>
+                    <p>[[data.billingNumber]]</p>
+                    <p>[[data.billingNumberMonth]]</p>
                 </div>
 
                 <div class="billingDetails">
-                    <p>
-                        [[taxNumber.de]]:
-                    </p>
-                    <p>
-                        [[billingDetails.taxNumber]]
-                    </p>
-                    <p>
-                        [[employeeDetails.code]]
-                    </p>
+                    <p>[[content.taxNumber]]:</p>
+                    <p>[[data.taxNumber]]</p>
+                    <p class="code">[[data.taxNumberCode]]</p>
                 </div>
             </div>
 
-            <div class="commissionSettlement">
+            <div class="performance-overview">
+                <div class="__table-title">
+                    <h2>[[content.performanceOverview]]</h2>
+                </div>
+                <table class="__table-overview-performance">
+                    <tbody>
+                        [[#if data.invoiceTotalMonthlySales]]
+                        <tr>
+                            <td>[[content.invoiceTotalMonthlySales]]</td>
+                            <td class="is-number">[[data.invoiceTotalMonthlySales]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.otherRevenue]]
+                        <tr>
+                            <td>[[content.otherRevenue]]</td>
+                            <td class="is-number">[[data.otherRevenue]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.otherProductResidue]]
+                        <tr>
+                            <td>[[content.otherProductResidue]]</td>
+                            <td class="is-number">[[data.otherProductResidue]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.commissionRevenue]]
+                        <tr>
+                            <td>[[content.commissionRevenue]]</td>
+                            <td class="is-number">[[data.commissionRevenue]]</td>
+                        </tr>
+                        [[/if]]
+                        [[#if data.sprayerRevenue]]
+                        <tr>
+                            <td>[[content.sprayerRevenue]]</td>
+                            <td class="is-number">[[data.sprayerRevenue]]</td>
+                        </tr>
+                        [[/if]]
+                    </tbody>
+                </table>
+            </div>
+            <div class="commission-billing section">
+                <div class="__table-title">
+                    <h2>[[content.commissionBilling]]</h2>
+                </div>
+                <table class="__table-commission-billing">
+                    <tbody>
+                        [[#if data.salesVolume]]
+                        <tr>
+                            <td>[[content.salesVolume]]</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="is-number">[[data.salesVolume]]</td>
+                        </tr>
+                        [[/if]]
 
+                    </tbody>
+                </table>
             </div>
         </main>
         <footer>
