@@ -27,6 +27,11 @@ header {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.pages {
+  height: 1287px;
+  position: relative;
+}
+
 .section {
   margin-top: 2rem;
 }
@@ -147,10 +152,6 @@ main {
   text-align: center;
 }
 
-.commission-settlement {
-  margin-top: 7rem;
-}
-
 .__table-service-billing {
   margin-top: 0rem;
 }
@@ -180,14 +181,29 @@ table tbody td.emphasize {
   font-weight: bold;
 }
 
+table tbody td.danger-emphasize {
+  font-weight: bold;
+  color: red;
+}
+
 table tbody td.is-number,
 table tfoot td.is-number {
+  text-align: right;
+}
+
+table tbody td.align-right,
+table tfoot td.align-right {
   text-align: right;
 }
 
 table tbody td.number,
 table tfoot td.number {
   text-align: center;
+}
+
+table tbody td.spacing-sm,
+table tfoot td.spacing-sm {
+  padding-top: 1rem;
 }
 
 tfoot {
@@ -210,8 +226,18 @@ thead tr td {
 tbody tr th,
 tbody tr td {
   font-size: 11pt;
+  padding-left: 10px;
 }
 
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 10pt;
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
 
 footer {
   font-size: 10pt;
@@ -264,8 +290,20 @@ footer {
   letter-spacing: 5px;
 }
 
+.w-50 {
+  width: 50px;
+}
+
+.w-100 {
+  width: 100px;
+}
+
 .w-200 {
   width: 200px;
+}
+
+.w-xs {
+  width: 25%;
 }
 
 .w-sm {
@@ -324,6 +362,9 @@ footer {
   margin-top: 1.5rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
 
 .gap-12 {
   gap: 3rem;
