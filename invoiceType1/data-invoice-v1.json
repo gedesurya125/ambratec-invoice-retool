@@ -43,7 +43,10 @@
     "starterBonus": "Starterbonus",
     "serviceAppointment": "Service Termine",
     "uvvInspection": "UVV Prüfungen",
-    "invoiceIsGeneratedBySystem": "Invoice was created on a computer and is valid without the signature and seal."
+    "invoiceIsGeneratedBySystem": "Invoice was created on a computer and is valid without the signature and seal.",
+    "name": "Bezeichnung",
+    "amount": "Betrag",
+    "specialPayment": "Sonderzahlungen"
   },
   "data": {
     "date": "Aug, 24",
@@ -86,6 +89,10 @@
     "starterBonusRefill": "€1889.28",
     "starterBonus": "€1889.28",
     "serviceAppointment": "€1889.28",
-    "uvvInspection": "€1889.28"
+    "uvvInspection": "€1889.28",
+    "specialPayment1Code": "674",
+    "specialPayment1Name": "Quartalsbonus",
+    "specialPayment1Amount": "0.00 €",
+    "specialPaymentTotal": "0.00 €"
   }
 }

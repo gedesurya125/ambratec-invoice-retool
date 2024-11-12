@@ -352,6 +352,39 @@
           </table>
         </div>
       </div>
+      <div class="performance-billing-container">
+        <div class="w-full flex flex-column content-center">
+          <div class="__table-title">
+            <h2 class="uppercase">3. [[content.specialPayment]]</h2>
+          </div>
+          <div class="flex content-center">
+            <table class="__table-special-payment">
+              <thead>
+                <tr>
+                  <td colspan="2" class="emphasize">[[content.name]]</td>
+                  <td class="is-number-emphasize">[[content.amount]]</td>
+                </tr>
+              </thead>
+              <tbody>
+                [[#if data.specialPayment1Code]]
+                <tr>
+                  <td class="w-50">[[data.specialPayment1Code]]</td>
+                  <td>[[data.specialPayment1Name]]</td>
+                  <td class="is-number-emphasize">[[data.specialPayment1Amount]]</td>
+                </tr>
+                [[/if]]
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <td colspan="2">[[content.total]]:</td>
+                  <td>[[data.specialPaymentTotal]]</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>[[content.invoiceIsGeneratedBySystem]]</footer>
   </div>

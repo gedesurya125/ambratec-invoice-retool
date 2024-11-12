@@ -52,7 +52,7 @@ header {
   width: 100%;
   gap: 5%;
   display: flex;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .__table-title {
@@ -72,7 +72,7 @@ header {
 }
 
 .performance-billing-container table {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 100%;
   border-collapse: collapse;
 }
@@ -113,14 +113,16 @@ header {
   color: red
 }
 
-table thead td.is-number-emphasize {
-  font-weight: bold;
-  text-align: center;
-}
-
+table thead td.is-number-emphasize,
 table tbody td.is-number-emphasize {
   font-weight: bold;
   text-align: right;
+}
+
+
+table tbody td.emphasize,
+table thead td.emphasize {
+  font-weight: bold;
 }
 
 table tbody td.is-number {
@@ -130,6 +132,7 @@ table tbody td.is-number {
 table tbody td.number {
   text-align: center;
 }
+
 
 .__table-overview-performance td,
 .__table-overview-performance th {
@@ -141,6 +144,10 @@ table tbody td.number {
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dotted black;
+}
+
+.performance-billing-container .__table-special-payment {
+  width: 75%
 }
 
 thead tr td,
@@ -182,6 +189,10 @@ footer {
 
 /* Reusable styles */
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .border-primary {
   border: 1px solid black;
 }
@@ -221,8 +232,16 @@ footer {
   letter-spacing: 5px;
 }
 
+.w-50 {
+  width: 50px;
+}
+
 .w-200 {
   width: 200px;
+}
+
+.w-xs {
+  width: 25%;
 }
 
 .w-sm {
