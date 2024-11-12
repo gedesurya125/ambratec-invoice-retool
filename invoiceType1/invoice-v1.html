@@ -46,7 +46,6 @@
               <tr>
                 <td></td>
                 <td class="is-number-emphasize">[[content.umsatz]]</td>
-                <td class="is-number-emphasize">[[content.sigma]]</td>
               </tr>
             </thead>
 
@@ -54,107 +53,32 @@
               [[#if data.merchandiseRevenue]]
               <tr>
                 <th>[[content.merchandiseRevenue]]:</th>
-                <td>[[data.merchandiseRevenue]]</td>
-                <td class="is-number-emphasize">
-                  [[data.merchandiseRevenueSigma]]
-                </td>
+                <td class="is-number">[[data.merchandiseRevenue]]</td>
               </tr>
               [[/if]] [[#if data.otherRevenue]]
               <tr>
                 <th>[[content.otherRevenue]]:</th>
-                <td>[[data.otherRevenue]]</td>
-                <td class="is-number-emphasize">[[data.otherRevenueSigma]]</td>
+                <td class="is-number">[[data.otherRevenue]]</td>
               </tr>
-              [[/if]] [[#if data.ambrasolRevenue]]
-              <tr>
-                <th>[[content.ambrasolRevenue]]:</th>
-                <td>[[data.ambrasolRevenue]]</td>
-                <td class="is-number-emphasize">[[data.ambrasolRevenueSigma]]</td>
+              [[/if]]
+              <tr class="total-row">
+                <th>[[content.ambratecTotal]]:</th>
+                <td class="is-number">[[data.performanceOverviewTotal]]</td>
               </tr>
-              [[/if]] [[#if data.sprayerRevenue]]
+              [[#if data.sprayerRevenue]]
               <tr>
                 <th>[[content.sprayerRevenue]]:</th>
-                <td>[[data.sprayerRevenue]]</td>
-                <td class="is-number-emphasize">[[data.sprayerRevenueSigma]]</td>
+                <td class="is-number">[[data.sprayerRevenue]]</td>
               </tr>
-              [[/if]] [[#if data.trainerMerchandiseRevenue]]
+              [[/if]]
+              [[#if data.ambrasolRevenue]]
               <tr>
-                <th>[[content.trainerMerchandiseRevenue]]:</th>
-                <td>[[data.trainerMerchandiseRevenue]]</td>
-                <td class="is-number-emphasize">
-                  [[data.trainerMerchandiseRevenueSigma]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.trainerOtherRevenue]]
-              <tr>
-                <th>[[content.trainerOtherRevenue]]:</th>
-                <td>[[data.trainerOtherRevenue]]</td>
-                <td class="is-number-emphasize">
-                  [[data.trainerOtherRevenueSigma]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.trainerAmbrasolRevenue]]
-              <tr>
-                <th>[[content.trainerAmbrasolRevenue]]:</th>
-                <td>[[data.trainerAmbrasolRevenue]]</td>
-                <td class="is-number-emphasize">
-                  [[data.trainerAmbrasolRevenueSigma]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.trainerSprayerRevenue]]
-              <tr>
-                <th>[[content.trainerSprayerRevenue]]:</th>
-                <td>[[data.trainerSprayerRevenue]]</td>
-                <td class="is-number-emphasize">
-                  [[data.trainerSprayerRevenueSigma]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.trainerAuxilaryProductRevenue]]
-              <tr>
-                <th>[[content.trainerAuxilaryProductRevenue]]:</th>
-                <td>[[data.trainerAuxilaryProductRevenue]]</td>
-                <td class="is-number-emphasize">
-                  [[data.trainerAuxilaryProductRevenueSigma]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.btrWgrFluidTaps]]
-              <tr>
-                <th>[[content.btrWgrFluidTaps]]:</th>
-                <td>[[data.btrWgrFluidTaps]]</td>
-                <td class="is-number-emphasize">[[data.btrWgrFluidTapsSigma]]</td>
-              </tr>
-              [[/if]] [[#if data.commissionRevenue]]
-              <tr>
-                <th>[[content.commissionRevenue]]:</th>
-                <td>[[data.commissionRevenue]]</td>
-                <td class="is-number-emphasize">
-                  [[data.commissionRevenueSigma]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.serviceAppoinmentsNumber]]
-              <tr>
-                <th>[[content.serviceAppoinmentsNumber]]:</th>
-                <td>[[data.serviceAppoinmentsNumber]]</td>
-                <td class="is-number-emphasize">
-                  [[data.serviceAppoinmentsNumberSigma]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.inspectionOfUvvNumber]]
-              <tr>
-                <th>[[content.inspectionOfUvvNumber]]:</th>
-                <td>[[data.inspectionOfUvvNumber]]</td>
-                <td class="is-number-emphasize">
-                  [[data.inspectionOfUvvNumberSigma]]
-                </td>
+                <th>[[content.ambrasolRevenue]]:</th>
+                <td class="is-number">[[data.ambrasolRevenue]]</td>
               </tr>
               [[/if]]
             </tbody>
-            <tfoot>
-              <tr>
-                <th>[[content.total]]:</th>
-                <td>[[data.performanceOverviewTotal]]</td>
-              </tr>
-            </tfoot>
+
           </table>
         </div>
 
@@ -163,17 +87,25 @@
             <h2>[[content.serviceBilling]]</h2>
           </div>
           <table class="__table-billing-performance">
-            <thead>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="is-number-emphasize">[[content.commission]]</td>
+            <tbody>
+              <tr class="grey-row">
+                <td colspan="4">[[content.guaranteedCommission]]</td>
+                <td class="is-number-emphasize">[[data.guaranteedCommission]]</td>
               </tr>
-            </thead>
+            </tbody>
+            <tbody>
+              <tr>
+                <td class="w-50"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="is-number-emphasize font-sm">[[content.commission]]</td>
+              </tr>
+            </tbody>
             <tbody>
               [[#if data.ambratecCommission]]
               <tr>
+                <td>[[content.ambratecCommissionCode]]</td>
                 <td>[[content.ambratecCommission]]</td>
                 <td>
                   <div class="filled-chevron-right"></div>
@@ -183,6 +115,7 @@
               </tr>
               [[/if]] [[#if data.sprayerCommission]]
               <tr>
+                <td>[[content.sprayerCommissionCode]]</td>
                 <td>[[content.sprayerCommission]]</td>
                 <td>
                   <div class="filled-chevron-right"></div>
@@ -192,6 +125,7 @@
               </tr>
               [[/if]] [[#if data.ambrasolCommission]]
               <tr>
+                <td>[[content.ambrasolCommissionCode]]</td>
                 <td>[[content.ambrasolCommission]]</td>
                 <td>
                   <div class="filled-chevron-right"></div>
@@ -199,154 +133,18 @@
                 <td class="is-number">[[data.ambrasolPercent]]</td>
                 <td class="is-number-emphasize">[[data.ambrasolCommission]]</td>
               </tr>
-              [[/if]] [[#if data.matecraCommission]]
-              <tr>
-                <td>[[content.matecraCommission]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.matecraPercent]]</td>
-                <td class="is-number-emphasize">[[data.matecraCommission]]</td>
-              </tr>
-              [[/if]] [[#if data.trainerRevenueCommission]]
-              <tr>
-                <td>[[content.trainerRevenueCommission]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.trainerRevenuePercent]]</td>
-                <td class="is-number-emphasize">
-                  [[data.trainerRevenueCommission]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.trainerSprayerCommission]]
-              <tr>
-                <td>[[content.trainerSprayerCommission]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.trainerSprayerPercent]]</td>
-                <td class="is-number-emphasize">
-                  [[data.trainerSprayerCommission]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.trainerAmbrasolCommission]]
-              <tr>
-                <td>[[content.trainerAmbrasolCommission]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.trainerAmbrasolPercent]]</td>
-                <td class="is-number-emphasize">
-                  [[data.trainerAmbrasolCommission]]
-                </td>
-              </tr>
-              [[/if]] [[#if data.upTo10000]]
-              <tr>
-                <td>[[content.upTo10000]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.upTo10000Percent]]</td>
-                <td class="is-number-emphasize">[[data.upTo10000]]</td>
-              </tr>
-              [[/if]] [[#if data.10000to15000]]
-              <tr>
-                <td>[[content.10000to15000]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.10000to15000Percent]]</td>
-                <td class="is-number-emphasize">[[data.10000to15000]]</td>
-              </tr>
-              [[/if]] [[#if data.moreThan15000]]
-              <tr>
-                <td>[[content.moreThan15000]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.moreThan15000Percent]]</td>
-                <td class="is-number-emphasize">[[data.moreThan15000]]</td>
-              </tr>
-              [[/if]] [[#if data.10000to20000]]
-              <tr>
-                <td>[[content.10000to20000]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.10000to20000Percent]]</td>
-                <td class="is-number-emphasize">[[data.10000to20000]]</td>
-              </tr>
-              [[/if]] [[#if data.moreThan20000]]
-              <tr>
-                <td>[[content.moreThan20000]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.moreThan20000Percent]]</td>
-                <td class="is-number-emphasize">[[data.moreThan20000]]</td>
-              </tr>
-              [[/if]] [[#if data.guaranteedCommission]]
-              <tr>
-                <td>[[content.guaranteedCommission]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.guaranteedPercent]]</td>
-                <td class="is-number-emphasize">[[data.guaranteedCommission]]</td>
-              </tr>
-              [[/if]] [[#if data.btrFluidWgr]]
-              <tr>
-                <td>[[content.btrFluidWgr]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.btrFluidWgrPercent]]</td>
-                <td class="is-number-emphasize">[[data.btrFluidWgr]]</td>
-              </tr>
-              [[/if]] [[#if data.starterBonusRefill]]
-              <tr>
-                <td>[[content.starterBonusRefill]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.starterBonusRefillPercent]]</td>
-                <td class="is-number-emphasize">[[data.starterBonusRefill]]</td>
-              </tr>
-              [[/if]] [[#if data.starterBonus]]
-              <tr>
-                <td>[[content.starterBonus]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.starterBonusPercent]]</td>
-                <td class="is-number-emphasize">[[data.starterBonus]]</td>
-              </tr>
-              [[/if]] [[#if data.serviceAppointment]]
-              <tr>
-                <td>[[content.serviceAppointment]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.serviceAppointmentPercent]]</td>
-                <td class="is-number-emphasize">[[data.serviceAppointment]]</td>
-              </tr>
-              [[/if]] [[#if data.uvvInspection]]
-              <tr>
-                <td>[[content.uvvInspection]]</td>
-                <td>
-                  <div class="filled-chevron-right"></div>
-                </td>
-                <td class="is-number">[[data.uvvInspectionPercent]]</td>
-                <td class="is-number-emphasize">[[data.uvvInspection]]</td>
+              <tr class="grey-row">
+                <td>[[content.guaranteedCommissionAdditionalCode]]</td>
+                <td colspan="3">[[content.guaranteedCommissionAdditional]]</td>
+                <td class="is-number">[[data.guaranteedCommissionAdditional]]</td>
               </tr>
               [[/if]]
             </tbody>
 
             <tfoot>
-              <tr>
-                <td colspan="3">[[content.commissionTotal]]:</td>
-                <td>[[data.commissionTotal]]</td>
+              <tr class="total-row">
+                <td colspan="4">[[content.commissionTotal]]:</td>
+                <td class="is-number">[[data.commissionTotal]]</td>
               </tr>
             </tfoot>
           </table>
@@ -376,9 +174,9 @@
               </tbody>
 
               <tfoot>
-                <tr>
-                  <td colspan="2">[[content.total]]:</td>
-                  <td>[[data.specialPaymentTotal]]</td>
+                <tr class="total-row">
+                  <th colspan="2">[[content.specialPaymentTotal]]:</th>
+                  <td class="is-number">[[data.specialPaymentTotal]]</td>
                 </tr>
               </tfoot>
             </table>
