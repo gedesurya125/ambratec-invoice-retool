@@ -102,6 +102,18 @@
     "specialPayment1Code": "674",
     "specialPayment1Name": "Quartalsbonus",
     "specialPayment1Amount": "0.00 €",
-    "specialPaymentTotal": "0.00 €"
+    "specialPaymentTotal": "0.00 €",
+    "specialPayments": [
+      {
+        "code": "oke",
+        "amount": 200,
+        "name": "oke"
+      },
+      {
+        "code": "super",
+        "amount": 300,
+        "name": "super"
+      }
+    ]
   }
 }
