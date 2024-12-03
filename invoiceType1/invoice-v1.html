@@ -11,7 +11,10 @@
           <h1 class="font-lg spacing-lg">[[ content.monthlyStatement ]]</h1>
         </div>
         <div class="flex align-items-center px-30 bg-color-black">
-          <p class="font-md color-background weight-semi-bold">[[data.date]]</p>
+          <p class="font-md color-background weight-semi-bold">
+            <span class="month-display" data-month="[[data.month]]"></span>
+            [[data.year]]
+          </p>
         </div>
       </div>
     </header>
@@ -64,20 +67,56 @@
                 <th>[[content.otherRevenue]]:</th>
                 <td class="is-number">[[data.otherRevenue]]</td>
               </tr>
+              [[/if]] [[#if data.trainerMerchandiseRevenue]]
+              <tr>
+                <th>[[content.trainerMerchandiseRevenue]]:</th>
+                <td class="is-number">[[data.trainerMerchandiseRevenue]]</td>
+              </tr>
+              [[/if]] [[#if data.trainerOtherRevenue]]
+              <tr>
+                <th>[[content.trainerOtherRevenue]]:</th>
+                <td class="is-number">[[data.trainerOtherRevenue]]</td>
+              </tr>
               [[/if]]
               <tr class="total-row">
-                <th>[[content.ambratecTotal]]:</th>
-                <td class="is-number">[[data.performanceOverviewTotal]]</td>
+                <th>[[content.totalSalesOfAmbratec]]:</th>
+                <td class="is-number">[[data.totalSalesOfAmbratec]]</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="spacing-sm"></td>
               </tr>
               [[#if data.sprayerRevenue]]
               <tr>
                 <th>[[content.sprayerRevenue]]:</th>
                 <td class="is-number">[[data.sprayerRevenue]]</td>
               </tr>
+              [[/if]] [[#if data.trainerSprayerRevenue]]
+              <tr>
+                <th>[[content.trainerSprayerRevenue]]:</th>
+                <td class="is-number">[[data.trainerSprayerRevenue]]</td>
+              </tr>
+              [[/if]] [[#if data.totalSalesOfSprayer]]
+              <tr class="total-row">
+                <th>[[content.totalSalesOfSprayer]]:</th>
+                <td class="is-number">[[data.totalSalesOfSprayer]]</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="spacing-sm"></td>
+              </tr>
               [[/if]] [[#if data.ambrasolRevenue]]
               <tr>
                 <th>[[content.ambrasolRevenue]]:</th>
                 <td class="is-number">[[data.ambrasolRevenue]]</td>
+              </tr>
+              [[/if]] [[#if data.trainerAmbrasolRevenue]]
+              <tr>
+                <th>[[content.trainerAmbrasolRevenue]]:</th>
+                <td class="is-number">[[data.trainerAmbrasolRevenue]]</td>
+              </tr>
+              [[/if]] [[#if data.totalSalesOfAmbrasol]]
+              <tr class="total-row">
+                <th>[[content.totalSalesOfAmbrasol]]:</th>
+                <td class="is-number">[[data.totalSalesOfAmbrasol]]</td>
               </tr>
               [[/if]]
             </tbody>
@@ -139,6 +178,7 @@
                 <td class="is-number">[[data.ambrasolPercent]]</td>
                 <td class="is-number-emphasize">[[data.ambrasolCommission]]</td>
               </tr>
+              [[/if]]
               <tr class="grey-row">
                 <td>[[content.guaranteedCommissionAdditionalCode]]</td>
                 <td colspan="3">[[content.guaranteedCommissionAdditional]]</td>
@@ -146,7 +186,6 @@
                   [[data.guaranteedCommissionAdditional]]
                 </td>
               </tr>
-              [[/if]]
             </tbody>
 
             <tfoot>
@@ -176,7 +215,7 @@
                 <tr>
                   <td class="w-50">[[code]]</td>
                   <td>[[name]]</td>
-                  <td class="is-number-emphasize">[[amount]]</td>
+                  <td class="is-number">[[displayAmount]]</td>
                 </tr>
                 [[/each]] [[/if]]
               </tbody>

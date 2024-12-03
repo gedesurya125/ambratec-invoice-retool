@@ -103,7 +103,6 @@ table tbody td.number {
   text-align: center;
 }
 
-
 .__table-overview-performance td,
 .__table-overview-performance th {
   font-weight: normal;
@@ -117,7 +116,7 @@ table tbody td.number {
 }
 
 .performance-billing-container .__table-special-payment {
-  width: 75%
+  width: 75%;
 }
 
 thead tr td,
@@ -127,11 +126,15 @@ thead tr th {
   padding: 5px 10px;
 }
 
-
 tbody tr th,
 tbody tr td {
   font-size: 10.5pt;
-  white-space: nowrap
+  white-space: nowrap;
+}
+
+table tbody td.spacing-sm,
+table tfoot td.spacing-sm {
+  padding-top: 1rem;
 }
 
 footer {
@@ -154,7 +157,7 @@ footer {
 }
 
 .grey-row {
-  color: grey
+  color: grey;
 }
 
 /* Reusable styles */
@@ -301,4 +304,52 @@ footer {
   border-left: 10px solid black;
   /* Color for the fill */
   display: inline-block;
+}
+
+.month-display[data-month="1"]::after {
+  content: "January";
+}
+
+.month-display[data-month="2"]::after {
+  content: "February";
+}
+
+.month-display[data-month="3"]::after {
+  content: "March";
+}
+
+.month-display[data-month="4"]::after {
+  content: "April";
+}
+
+.month-display[data-month="5"]::after {
+  content: "May";
+}
+
+.month-display[data-month="6"]::after {
+  content: "June";
+}
+
+.month-display[data-month="7"]::after {
+  content: "July";
+}
+
+.month-display[data-month="8"]::after {
+  content: "August";
+}
+
+.month-display[data-month="9"]::after {
+  content: "September";
+}
+
+.month-display[data-month="10"]::after {
+  content: "October";
+}
+
+.month-display[data-month="11"]::after {
+  content: "November";
+}
+
+.month-display[data-month="12"]::after {
+  content: "December";
 }
