@@ -38,7 +38,8 @@
     "amount": "Betrag",
     "specialPaymentTotal": "Sonderzahlungen Gesamt",
 
-    "invoiceIsGeneratedBySystem": "Invoice was created on a computer and is valid without the signature and seal."
+    "invoiceIsGeneratedBySystem": "Invoice was created on a computer and is valid without the signature and seal.",
+    "mealAllowance": "VERPFLEGUNGSPAUSCHALE"
   },
   "data": {
     "month": "test",
@@ -62,7 +63,20 @@
     "guaranteedCommissionAdditional": 100,
     "commissionTotal": 100,
     "specialPaymentTotal": 100,
-    "specialPayments": 100,
+    "specialPayments": [
+      {
+        "code": "41",
+        "name": "Zulage",
+        "amount": 5000,
+        "displayAmount": "5,000.00 €"
+      },
+      {
+        "code": "41",
+        "name": "Zulage",
+        "amount": 5000,
+        "displayAmount": "5,000.00 €"
+      }
+    ],
 
     "trainerMerchandiseRevenue": 100,
     "trainerOtherRevenue": 100,
@@ -70,6 +84,22 @@
     "trainerAmbrasolRevenue": 100,
 
     "totalSalesOfSprayer": 100,
-    "totalSalesOfAmbrasol": 100
+    "totalSalesOfAmbrasol": 100,
+    "mealAllowances": [
+      {
+        "code": "234",
+        "name": "delicious food",
+        "cost": 10,
+        "quantity": 23,
+        "total": 100
+      },
+      {
+        "code": "234",
+        "name": "delicious food",
+        "cost": 10,
+        "quantity": 23,
+        "total": 100
+      }
+    ]
   }
 }

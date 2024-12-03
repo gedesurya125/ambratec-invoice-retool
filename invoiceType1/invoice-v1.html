@@ -197,10 +197,50 @@
           </table>
         </div>
       </div>
+
       <div class="performance-billing-container">
         <div class="w-full flex flex-column content-center">
           <div class="__table-title">
-            <h2 class="uppercase">3. [[content.specialPayment]]</h2>
+            <h2 class="uppercase">3. [[content.mealAllowance]]</h2>
+          </div>
+          <div class="flex content-center">
+            <table class="__table-special-payment">
+              <thead>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="is-number-emphasize">[[content.name]]</td>
+                  <td class="is-number-emphasize">[[content.amount]]</td>
+                </tr>
+              </thead>
+              <tbody>
+                [[#if data.mealAllowances]] [[#each data.mealAllowances]]
+                <tr>
+                  <td class="w-50">[[code]]</td>
+                  <td>[[name]]</td>
+                  <td class="is-number">[[cost]]</td>
+                  <td class="is-number">[[quantity]]</td>
+                  <td class="is-number">[[total]]</td>
+                </tr>
+                [[/each]] [[/if]]
+              </tbody>
+
+              <tfoot>
+                <tr class="total-row">
+                  <th colspan="4">[[content.specialPaymentTotal]]:</th>
+                  <td class="is-number">[[data.specialPaymentTotal]]</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="performance-billing-container">
+        <div class="w-full flex flex-column content-center">
+          <div class="__table-title">
+            <h2 class="uppercase">4. [[content.specialPayment]]</h2>
           </div>
           <div class="flex content-center">
             <table class="__table-special-payment">
