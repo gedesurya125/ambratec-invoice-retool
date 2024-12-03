@@ -39,7 +39,8 @@
     "specialPaymentTotal": "Sonderzahlungen Gesamt",
 
     "invoiceIsGeneratedBySystem": "Invoice was created on a computer and is valid without the signature and seal.",
-    "mealAllowance": "VERPFLEGUNGSPAUSCHALE"
+    "mealAllowance": "VERPFLEGUNGSPAUSCHALE",
+    "mealAllowanceTotal": "Verpflegungspauschale Gesamt"
   },
   "data": {
     "month": "test",
@@ -100,6 +101,7 @@
         "quantity": 23,
         "total": 100
       }
-    ]
+    ],
+    "mealAllowanceTotal": 100
   }
 }
