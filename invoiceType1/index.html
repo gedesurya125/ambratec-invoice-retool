@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <title>Ambratec invoice</title>
+  <script></script>
+</head>
+
+<body></body>
+
+</html>
+<script>
+  //? Helper function
+  async function loadFileAsString(url) {
+    try {
+      const response = await fetch(url)
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`);
+      }
+      const templateString = await response.text();
+      return templateString;
+    } catch (error) {
+      console.error("Failed to load template:", error);
+      return "";
+    }
+  }
+
+  function addStyle(styleString) {
+    const style = document.createElement("style");
+    style.textContent = styleString;
+    document.head.append(style);
+  }
+
+  // Main function
+
+  async function renderTemplate() {
+    const templateString = await loadFileAsString("invoice-v1.html");
+    const cssString = await loadFileAsString("style-invoice-v1.css");
+    const dataString = await loadFileAsString("data-invoice-v1.json");
+
+    const handlebarTemplate = templateString
+      .replace(/\[\[/g, "{{")
+      .replace(/\]\]/g, "}}");
+    const template = Handlebars.compile(handlebarTemplate);
+    let parsedData = JSON.parse(dataString);
+    console.log(parsedData)
+
+    const html = template(parsedData);
+    addStyle(cssString);
+    document.body.innerHTML = html;
+  }
+
+  renderTemplate();
+
+</script>

@@ -19,6 +19,7 @@ header {
 }
 
 .sales-info-table {
+  width: 30%;
   margin-top: 20px;
   border-collapse: collapse;
 }
@@ -30,7 +31,7 @@ header {
 .sales-info-table tr td,
 .sales-info-table tr th {
   font-weight: normal;
-  font-size: 12px;
+  font-size: 11pt;
   padding: 5px;
 }
 
@@ -52,7 +53,7 @@ header {
   width: 100%;
   gap: 5%;
   display: flex;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .__table-title {
@@ -62,7 +63,7 @@ header {
 
 .__table-title h2 {
   text-align: center;
-  font-size: 14px;
+  font-size: 12pt;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -71,59 +72,30 @@ header {
   width: 120px;
 }
 
-.performance-billing-container table {
-  margin-top: 50px;
+table {
+  margin-top: 20px;
   width: 100%;
   border-collapse: collapse;
 }
 
-.performance-billing-container tbody td,
-.performance-billing-container tbody th {
+table tbody td,
+table tbody th {
   padding: 5px 10px;
 }
 
-.performance-billing-container tfoot {
-  border-top: 1px solid black;
-  border-bottom: 3px solid black;
-}
-
-.performance-billing-container tfoot th {
-  padding: 5px 10px;
-  font-weight: bold;
-}
-
-.performance-billing-container tfoot td {
-  padding: 5px 10px;
-  font-weight: bold;
-  text-align: right;
-}
-
-.performance-billing-container .total-section {
-  border-top: 1px solid black;
-  border-bottom: 3px solid black;
-}
-
-.performance-billing-container .total-section th,
-.performance-billing-container .total-section td {
-  font-weight: bold;
-  text-align: right;
-}
-
-.miscellaneous-value {
-  color: red
-}
-
-table thead td.is-number-emphasize {
-  font-weight: bold;
-  text-align: center;
-}
-
+table thead td.is-number-emphasize,
 table tbody td.is-number-emphasize {
   font-weight: bold;
   text-align: right;
 }
 
-table tbody td.is-number {
+table tbody td.emphasize,
+table thead td.emphasize {
+  font-weight: bold;
+}
+
+table tbody td.is-number,
+table tfoot td.is-number {
   text-align: right;
 }
 
@@ -143,20 +115,26 @@ table tbody td.number {
   border-bottom: 1px dotted black;
 }
 
-thead tr td {
-  font-size: 10px;
+.performance-billing-container .__table-special-payment {
+  width: 75%;
+}
+
+thead tr td,
+thead tr th {
+  font-size: 8pt;
   text-align: center;
   padding: 5px 10px;
 }
 
 tbody tr th,
-td {
-  font-size: 12px;
+tbody tr td {
+  font-size: 10.5pt;
+  white-space: nowrap;
 }
 
-tfoot tr th,
-td {
-  font-size: 12px;
+table tbody td.spacing-sm,
+table tfoot td.spacing-sm {
+  padding-top: 1rem;
 }
 
 footer {
@@ -165,7 +143,27 @@ footer {
   text-align: center;
 }
 
+.total-row {
+  border-top: 1px solid black;
+  border-bottom: 2px solid black;
+}
+
+.total-row th,
+.total-row td {
+  font-size: 10.5pt;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: right;
+}
+
+.grey-row {
+  color: grey;
+}
+
 /* Reusable styles */
+.uppercase {
+  text-transform: uppercase;
+}
 
 .border-primary {
   border: 1px solid black;
@@ -194,20 +192,32 @@ footer {
   padding-bottom: 10px;
 }
 
+.font-sm {
+  font-size: 8pt;
+}
+
 .font-md {
-  font-size: 14px;
+  font-size: 11pt;
 }
 
 .font-lg {
-  font-size: 12px;
+  font-size: 12pt;
 }
 
 .spacing-lg {
   letter-spacing: 5px;
 }
 
+.w-50 {
+  width: 50px;
+}
+
 .w-200 {
   width: 200px;
+}
+
+.w-xs {
+  width: 25%;
 }
 
 .w-sm {
@@ -294,4 +304,52 @@ footer {
   border-left: 10px solid black;
   /* Color for the fill */
   display: inline-block;
+}
+
+.month-display[data-month="1"]::after {
+  content: "January";
+}
+
+.month-display[data-month="2"]::after {
+  content: "February";
+}
+
+.month-display[data-month="3"]::after {
+  content: "March";
+}
+
+.month-display[data-month="4"]::after {
+  content: "April";
+}
+
+.month-display[data-month="5"]::after {
+  content: "May";
+}
+
+.month-display[data-month="6"]::after {
+  content: "June";
+}
+
+.month-display[data-month="7"]::after {
+  content: "July";
+}
+
+.month-display[data-month="8"]::after {
+  content: "August";
+}
+
+.month-display[data-month="9"]::after {
+  content: "September";
+}
+
+.month-display[data-month="10"]::after {
+  content: "October";
+}
+
+.month-display[data-month="11"]::after {
+  content: "November";
+}
+
+.month-display[data-month="12"]::after {
+  content: "December";
 }

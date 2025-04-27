@@ -1,0 +1,107 @@
+{
+  "content": {
+    "monthlyStatement": "Monatsabrechnung",
+    "performanceOverview": "1. LEISTUNGSÜBERSICHT",
+    "salesName": "Name",
+    "salesVtId": "VT- ID",
+    "salesVerkCode": "Verk. - Code",
+    "personalnr": "Personalnr.",
+
+    "merchandiseRevenue": "Umsatz Handelsware",
+    "otherRevenue": "Umsatz Sonstiges",
+    "totalSalesOfAmbratec": "Umsatz Ambratec Gesamt",
+    "sprayerRevenue": "Umsatz Sprüher",
+    "totalSalesOfSprayer": "Umsatz Sprüher Gesamt",
+    "ambrasolRevenue": "Umsatz Ambrasol",
+    "totalSalesOfAmbrasol": "Umsatz Ambrasol Gesamt",
+
+    "trainerMerchandiseRevenue": "Trainer Umsatz Handelsware",
+    "trainerOtherRevenue": "Trainer Umsatz Sonstiges",
+    "trainerSprayerRevenue": "Trainer Umsatz Sprüher",
+    "trainerAmbrasolRevenue": "Trainer-Umsatz Ambrasol",
+
+    "serviceBilling": "2. LEISTUNGSABRECHNUNG",
+    "commission": "PROVISION",
+    "guaranteedCommission": "Garantieprovision",
+    "ambratecCommissionCode": "170",
+    "ambratecCommission": "Prov. Ambratec",
+    "sprayerCommissionCode": "237",
+    "sprayerCommission": "Prov. Sprüher",
+    "ambrasolCommissionCode": "236",
+    "ambrasolCommission": "Prov. Ambrasol",
+    "guaranteedCommissionAdditionalCode": "243",
+    "guaranteedCommissionAdditional": "Garantieprovision auffüllung",
+    "commissionTotal": "Provision Gesamt",
+
+    "specialPayment": "Sonderzahlungen",
+    "name": "Bezeichnung",
+    "amount": "Betrag",
+    "specialPaymentTotal": "Sonderzahlungen Gesamt",
+
+    "invoiceIsGeneratedBySystem": "Invoice was created on a computer and is valid without the signature and seal.",
+    "mealAllowance": "VERPFLEGUNGSPAUSCHALE",
+    "mealAllowanceTotal": "Verpflegungspauschale Gesamt"
+  },
+  "data": {
+    "month": "test",
+    "year": "test",
+    "salesName": "test",
+    "salesVtId": "-",
+    "salesVerkCode": "test",
+    "personalnr": "-.",
+    "merchandiseRevenue": 100,
+    "otherRevenue": 100,
+    "totalSalesOfAmbratec": 100,
+    "ambrasolRevenue": 100,
+    "sprayerRevenue": 100,
+    "guaranteedCommission": 100,
+    "ambratecCommission": 100,
+    "ambratecPercent": 100,
+    "sprayerCommission": 100,
+    "sprayerPercent": 100,
+    "ambrasolCommission": 100,
+    "ambrasolPercent": "",
+    "guaranteedCommissionAdditional": 100,
+    "commissionTotal": 100,
+    "specialPaymentTotal": 100,
+    "specialPayments": [
+      {
+        "code": "41",
+        "name": "Zulage",
+        "amount": 5000,
+        "displayAmount": "5,000.00 €"
+      },
+      {
+        "code": "41",
+        "name": "Zulage",
+        "amount": 5000,
+        "displayAmount": "5,000.00 €"
+      }
+    ],
+
+    "trainerMerchandiseRevenue": 100,
+    "trainerOtherRevenue": 100,
+    "trainerSprayerRevenue": 100,
+    "trainerAmbrasolRevenue": 100,
+
+    "totalSalesOfSprayer": 100,
+    "totalSalesOfAmbrasol": 100,
+    "mealAllowances": [
+      {
+        "code": "234",
+        "name": "delicious food",
+        "cost": 10,
+        "quantity": 23,
+        "total": 100
+      },
+      {
+        "code": "234",
+        "name": "delicious food",
+        "cost": 10,
+        "quantity": 23,
+        "total": 100
+      }
+    ],
+    "mealAllowanceTotal": 100
+  }
+}
